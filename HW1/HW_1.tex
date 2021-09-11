@@ -37,15 +37,8 @@ Part1)\\
 1)\\
 It is given that the Data set is set up as D.\\
 \begin{equation*}
-D = 
-\begin{bmatrix}
-19 & 12 \\
-22 &  6 \\
- 6  &  9 \\
- 3 &  15 \\
- 2 &  13 \\
-20 &  5 \\
-\end{bmatrix}
+D =
+\begin{bmatrix}19 & 12 \\22 &  6 \\6  &  9 \\3 &  15 \\2 &  13 \\20 &  5 \\\end{bmatrix}
 \end{equation*}
 To center it, $\mu$ must be found for both attributs and subtracted from D.
 \begin{equation*}
@@ -60,32 +53,11 @@ Once found, $\bar{D}= D -\bold{1}*\mu$
 \begin{equation*}
 \begin{split}
 \bar{D}&=
-\begin{bmatrix}
-19 & 12 \\
-22 &  6 \\
- 6  &  9 \\
- 3 &  15 \\
- 2 &  13 \\
-20 &  5 
-\end{bmatrix}
+\begin{bmatrix}19 & 12 \\22 &  6 \\ 6  &  9 \\ 3 &  15 \\ 2 &  13 \\20 &  5 \end{bmatrix}
 -
-\begin{bmatrix}
-12 & 10 \\
-12 & 10 \\
-12 & 10 \\
-12 & 10 \\
-12 & 10 \\
-12 & 10 
-\end{bmatrix}\\
+\begin{bmatrix}12 & 10 \\12 & 10 \\12 & 10 \\12 & 10 \\12 & 10 \\12 & 10 \end{bmatrix}\\
 \bar{D}&=
-\begin{bmatrix}
-    7 &  2 \\
-  10 & -4 \\
-   -6 & -1 \\
-   -9 &  5 \\
- -10 &  3 \\
-    8 & -5 
-\end{bmatrix}
+\begin{bmatrix}7 &  2 \\10 & -4 \\-6 & -1 \\-9 &  5 \\-10 &  3 \\8 & -5 \end{bmatrix}
 \end{split}
 \end{equation*}
 \newpage
@@ -95,30 +67,14 @@ Finding the Covariance of a centerd matrix is $C_{x} = \frac{1}{n-1} * \bar{D}^{
 \begin{split}
 C_{x}&= \frac{1}{6-1}
 *
-\begin{bmatrix}
-7 & 10 & -6& -9 & -10 & 8\\
-2 & -4 & -1& 5 & 3 &-5
-\end{bmatrix}
+\begin{bmatrix}7 & 10 & -6& -9 & -10 & 8\\2 & -4 & -1& 5 & 3 &-5\end{bmatrix}
 *
-\begin{bmatrix}
-    7 &  2 \\
-  10 & -4 \\
-   -6 & -1 \\
-   -9 &  5 \\
- -10 &  3 \\
-    8 & -5 
-\end{bmatrix}\\
+\begin{bmatrix}7 &  2 \\10 & -4 \\-6 & -1 \\-9 &  5 \\-10 &  3 \\8 & -5 \end{bmatrix}\\
 C_{x} &= \frac{1}{5}
 *
-\begin{bmatrix}
-430 & -135 \\
--135 & 80
-\end{bmatrix}\\
+\begin{bmatrix}430 & -135 \\-135 & 80\end{bmatrix}\\
 C_{x} &= 
-\begin{bmatrix}
-86 & -27 \\
--27 & 16
-\end{bmatrix}
+\begin{bmatrix}86 & -27 \\-27 & 16\end{bmatrix}
 \end{split}
 \end{equation*}
 %In the middle if y
@@ -127,19 +83,11 @@ $det(C_{x} -\lambda *1)$
 \begin{equation*}
 \begin{split}
 det(
-\begin{bmatrix}
-86 & -27 \\
--27 & 16
-\end{bmatrix}
+\begin{bmatrix}86 & -27 \\-27 & 16\end{bmatrix}
 - 
-\begin{bmatrix}
-\lambda & 0 \\
-0 & \lambda
-\end{bmatrix}) = 0\\
+\begin{bmatrix}\lambda & 0 \\0 & \lambda\end{bmatrix}) = 0\\
 det(
-\begin{bmatrix}
-86 - \lambda & -27 \\
--27 & 16 - \lambda
+\begin{bmatrix}86 - \lambda & -27 \\-27 & 16 - \lambda
 \end{bmatrix}) = 0\\
 (86-\lambda)(16-\lambda) - (-27)(-27) = 0\\
 1376 -102\lambda + \lambda^{2} - 729 = 0\\
