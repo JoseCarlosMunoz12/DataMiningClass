@@ -95,5 +95,23 @@ det(
 \end{split}
 \end{equation*}
 From the polynomial $\lambda^{2} -102\lambda + 647 $, the components a, b and c are 1,-102, and 647 respectively. To find the Eigen Values, we find the root of the polynomials. Which can be done with the quadratic equation. Giving us 2  roots; $\lambda_{1} = 95.204072$ and $\lambda_{2} = 6.795928$.
+\newpage
+4)The principal component matrix is made up from the Eigen Vectors of $C_{x}$. Using R  the Pricipal Component matix is
+\begin{equation*}
+\begin{bmatrix}-0.9465153 & -0.3226591 \\0.3226591 & -0.9465153
+\end{bmatrix}
+\end{equation*}
+5)The first principal component $p_{1}$ is the chosen component devided by the sum of all the components. So the percentage is $0.9333733$.\\
+6)THe PCA transformation is found by $\bold{Y} = \bold{P}^{-1} * \bold{X}$.
+\begin{equation*}
+\begin{split}
+\bold{P}^{-1} &=\begin{bmatrix}-0.9465153 & 0.3226591 \\-0.3226591 & -0.9465153\end{bmatrix}\\
+\bold{Y} &=\begin{bmatrix}19 & 12 \\22 &  6 \\ 6  &  9 \\ 3 &  15 \\ 2 &  13 \\20 &  5 \end{bmatrix}
+ *
+\begin{bmatrix}-0.9465153 & 0.3226591 \\-0.3226591 & -0.9465153\end{bmatrix}\\
+&=\begin{bmatrix}-14.111881 &-17.48871 \\ -18.887381 &-12.77759 \\ -2.775160 &-10.45459 \\ 2.000340 &-15.16571 \\ 2.301537 & -12.95002 \\ -17.317010 &-11.18576 \end{bmatrix}
+\end{split}
+\end{equation*}
+7)
 %===============================
 \end{document}
