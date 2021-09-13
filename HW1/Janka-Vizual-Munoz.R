@@ -11,10 +11,10 @@ cvm<-cov(allData$X.Density,allData$Hardness);cvm
 allstd<-apply(allData[1:ncol(data)],2,sd);allstd
 #Display both frequencies in a histogram and save it in a pdf
 hist(allData$X.Density,probability=FALSE,main="Density")
-dev.copy2pdf(file="histogram.pdf")
+dev.copy2pdf(file="DensityHistogram.pdf")
 dev.off()
 hist(allData$Hardness,probability=FALSE,main="Hardness")
-dev.copy2pdf(file="histogram1.pdf")
+dev.copy2pdf(file="HardnessHistogram.pdf")
 dev.off()
 #using the CDF and plotting them
 plot(ecdf(allData$X.Density))
