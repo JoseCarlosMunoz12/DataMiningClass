@@ -2,7 +2,7 @@ require(xlsx);require(graphics)
 #read file from janka
 data = read.xlsx2("janka.xlsx",1)
 allData = read.xlsx2("janka.xlsx", 1, colClasses = c(rep("numeric", ncol(data))))
-#Get all the means from both atrributes
+#Get all the means from both atributes
 allmu <-colMeans(allData[1:ncol(data)]);allmu
 #Get All variance of the attributes
 allVariance<-apply(allData[1:ncol(data)],2,var);allVariance
