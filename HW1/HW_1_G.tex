@@ -34,12 +34,12 @@
     Jose Carlos Munoz
 \end{center}
 Question 1)\par
-For time series clustering, the high positive correlation are what matters the most. So for this situation it would be wise that clamp the values that are below zero to zero.As shown in equation 1.
+For time series clustering, the positive correlation are what matters the most. This is because we want to cluster items that are correlated to each other the most. So any negative correlation is not taken into account.So for this situation it would be wise that clamp the values from 0 to 1 .As shown in equation 1.
 \begin{equation}
 transform =
 \begin{Bmatrix} corr &if &corr \geq 0  \\  0     & if & corr < 0  \\  \end{Bmatrix}
 \end{equation}
-For predicting a behavior change between one time series for another, what we are after is just if there is a certain correlation;regardless if it is positive or negatie. So for this transform, it would just be the absolute value of the correlation value, or as $transform =|corr|$.
+For predicting a behavior change between one time series for another, what we are after is just if there is a certain correlation;regardless if it is positive or negative. So for this transform, it would just be the absolute value of the correlation value, or as $transform =|corr|$.
 \\
 \\
 Question 2)\par
