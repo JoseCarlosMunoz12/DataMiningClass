@@ -9,12 +9,12 @@ allVariance<-apply(allData[1:ncol(data)],2,var);allVariance
 cvm<-cov(allData$Density,allData$Hardness);cvm
 #Get All standard deviation of the attributes
 allstd<-apply(allData[1:ncol(data)],2,sd);allstd
-#Display both frequencies in a histogram and save it in a pdf
+#Display both frequencies in a histogram and save it in a pdfjpeg(file="saving_plot1.jpeg")
+jpeg(file="Density-Histogram-Munoz.jpeg")
 hist(allData$Density,probability=FALSE,main="Density")
-dev.copy2pdf(file="DensityHistogram.pdf")
 dev.off()
+jpeg(file="Hardness-Histogram-Munoz.jpeg")
 hist(allData$Hardness,probability=FALSE,main="Hardness")
-dev.copy2pdf(file="HardnessHistogram.pdf")
 dev.off()
 #using the CDF and plotting them
 plot(ecdf(allData$Density))
