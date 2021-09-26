@@ -137,11 +137,45 @@ The Gini for Shirt Size is as showin in\eqref{eq:13}\\ \\
 %===============================
 %===============================
 3.2f)\\
-THe Cat type because it has the lowest Gini Index.\\
+The Car type because it has the lowest Gini Index.\\\\
+%===============================
+%===============================
 3.5a)\\
-answer 1\\
+\begin{equation}\tag{1}\label{eq:14}
+\begin{split}
+E_{orig} &= - \frac{4}{10} *log(\frac{4}{10}) - \frac{6}{10} *log(\frac{6}{10})\\
+&=.9710
+\end{split}
+\end{equation}
+%===============================
+The  overall Entropy before the split is shown in \eqref{eq:14}\\
+\begin{equation}\tag{2}\label{eq:15}
+\begin{split}
+E_{T} &= - \frac{4}{7} *log(\frac{4}{7}) - \frac{3}{7} *log(\frac{4}{7})\\
+E_{F} &= - \frac{3}{3} *log(\frac{3}{3}) - \frac{0}{3} *log(\frac{0}{0})\\
+\Delta E &=E{orig} - \frac{7}{10} * E_{T} - \frac{3}{10} * E_{F}\\
+ &=0.2813
+\end{split}
+\end{equation}
+%===============================
+The data gain from the splitting for A is show in \eqref{eq:15}\\
+\begin{equation}\tag{3}\label{eq:16}
+\begin{split}
+E_{T} &= - \frac{3}{4} *log(\frac{3}{4}) - \frac{1}{4} *log(\frac{1}{4})\\
+E_{F} &= - \frac{1}{6} *log(\frac{1}{6}) - \frac{5}{6} *log(\frac{5}{6})\\
+\Delta E &=E{orig} - \frac{4}{10} * E_{T} - \frac{6}{10} * E_{F}\\
+ &=0.2565
+\end{split}
+\end{equation}
+%===============================
+The data gain from the splitting for B is show in \eqref{eq:16}\\ \\
 3.7a)\\
-answer 1\\
+P(A=1 $\vert$-)=2/5=0.4 , P(A=1 $\vert$+)=3/5=0.6 , P(A=0 $\vert$-)=3/5=0.6 , P(A=0 $\vert$+)=2/5=0.4\\
+P(B=1 $\vert$-)=2/5=0.4 , P(B=1 $\vert$+)=1/5=0.2  , P(B=0 $\vert$-)=3/5=0.6 , P(B=0 $\vert$+)=4/5=0.8\\
+P(C=1 $\vert$-)=4/4=1.0 , P(C=1 $\vert$+)=4/5=0.8 , P(C=0 $\vert$-)=0/4=0.0 , P(C=0 $\vert$+)=1/5=0.2\\
+\\
+%===============================
+%===============================
 3.7b)\\
 answer 1
 3.7c)\\
