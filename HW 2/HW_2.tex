@@ -10,6 +10,7 @@
 \usepackage{lettrine} 
 \usepackage{tikz}  
 \usepackage{color} 
+\usepackage{verbatim}
  \usetikzlibrary{shapes, arrows, calc, arrows.meta, fit, positioning} % these are the parameters passed to the library to create the node graphs  
 \tikzset{  
     -Latex,auto,node distance =0.6 cm and 1.3 cm, thick,% node distance is the distance between one node to other, where 1.5cm is the length of the edge between the nodes  
@@ -18,6 +19,14 @@
     bidirected/.style={Latex-Latex,dashed}, % it is the edge having two directions  
     el/.style = {inner sep=2.5pt, align=right, sloped}  
 }  
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white, bottom color=blue!20},
+  root/.style     = {treenode, font=\Large, bottom color=red!30},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
 \setlength{\parskip}{12pt}
 \title{Home Work 1 Undergraduate}
 \date{\today}
@@ -170,6 +179,27 @@ E_{F} &= - \frac{1}{6} *log(\frac{1}{6}) - \frac{5}{6} *log(\frac{5}{6})\\
 %===============================
 The data gain from the splitting for B is show in \eqref{eq:16}\\ \\
 3.7a)\\
+\begin{tikzpicture}
+  [
+    grow                    = down,
+    sibling distance        = 6em,
+    level distance          = 10em,
+    edge from parent/.style = {draw, -latex},
+    every node/.style       = {font=\footnotesize},
+    sloped
+  ]
+  \node [root] {Formula}
+    child { node [env] {equation}
+      edge from parent node [below] {Test?} }
+    child { node [dummy] {ret}
+      child { node [dummy] {}}
+      child { node [env] {multline}
+              edge from parent node [above, align=center]
+                {first left,\\centered,}
+              node [below] {last right}}
+              edge from parent node [above] {multi-line?} };
+\end{tikzpicture}
+\\
 %===============================
 %===============================
 3.7b)\\
