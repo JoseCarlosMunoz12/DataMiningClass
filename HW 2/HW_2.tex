@@ -175,35 +175,35 @@ To find best greedy split we find which of the options gives us the least errors
 \begin{equation*}\tag{1}\label{eq:17}
 \begin{bmatrix} X & C1 & C2 \\0 & 60 &  60 \\1 & 40 &  40 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:17},when X is 0, we see that there is a min of 60 errors and when X is 1, there is a min of 40 errors. So for X, it has an error rate of $frac{60+40}{200}$;.5\\
+As seen from \eqref{eq:17},when X is 0, we see that there is a min of 60 errors and when X is 1, there is a min of 40 errors. So for X, it has an error rate of $\frac{60+40}{200}$;.5\\
 \begin{equation*}\tag{2}\label{eq:18}
 \begin{bmatrix} Y & C1 & C2 \\0 & 40 &  60 \\1 & 60 &  40 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:18}, when Y is 0, we see that there is a min of 40 errors and when X is 1, there is a min of 40 errors. So for X, it has an error rate of $frac{40+40}{200}$;.4\\
+As seen from \eqref{eq:18}, when Y is 0, we see that there is a min of 40 errors and when X is 1, there is a min of 40 errors. So for X, it has an error rate of $\frac{40+40}{200}$;.4\\
 \begin{equation*}\tag{3}\label{eq:19}
 \begin{bmatrix} Z & C1 & C2 \\0 & 30 &  70 \\1 & 70 &  30 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:19}, when Z is 0, we see that there is a min of 30 errors and when X is 1, there is a min of 30 errors. So for X, it has an error rate of $frac{30+30}{200}$;.3\\
+As seen from \eqref{eq:19}, when Z is 0, we see that there is a min of 30 errors and when X is 1, there is a min of 30 errors. So for X, it has an error rate of $\frac{30+30}{200}$;.3\\
 We split first at Z because it has the lowest error rate\par
 Z=0\\
 \begin{equation*}\tag{1}\label{eq:20}
 \begin{bmatrix} X & C1 & C2 \\0 & 15 &  45 \\1 & 15 &  25 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:20},when X is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $frac{15+15}{100}$;.3\\
+As seen from \eqref{eq:20},when X is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $\frac{15+15}{100}$;.3\\
 \begin{equation*}\tag{2}\label{eq:21}
 \begin{bmatrix} Y & C1 & C2 \\0 & 15 &  45 \\1 & 15 &  25 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:20},when Y is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $frac{15+15}{100}$;.3\\
+As seen from \eqref{eq:20},when Y is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $\frac{15+15}{100}$;.3\\
 Since both are about the same, the node split can be choosen arbirtarly\par
 Z=1\\
 \begin{equation*}\tag{1}\label{eq:22}
 \begin{bmatrix} X & C1 & C2 \\0 & 25 &  15 \\1 & 25 &  15 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:22},when X is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $frac{15+15}{100}$;.3\\
+As seen from \eqref{eq:22},when X is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $\frac{15+15}{100}$;.3\\
 \begin{equation*}\tag{2}\label{eq:23}
 \begin{bmatrix} Y & C1 & C2 \\0 & 45 &  15 \\1 & 45 &  15 \\ \end{bmatrix}
 \end{equation*}
-As seen from \eqref{eq:23},when Y is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $frac{15+15}{100}$;.3\\
+As seen from \eqref{eq:23},when Y is 0, we see that there is a min of 15 errors and when X is 1, there is a min of 15 errors. So for X, it has an error rate of $\frac{15+15}{100}$;.3\\
 Since both are about the same, the node split can be choosen arbirtarly\par
 The 2 level decision tree looks like this\\
 \begin{tikzpicture}
@@ -417,7 +417,7 @@ E_{C=F} &= 1 - max(\frac{25}{50},\frac{25}{50})\\
 &= 0
 \end{split}
 \end{equation*}
-From what we see from \eqref{48} and \eqref{44}, we will split B because it is the one with the highest information gain.\\
+From what we see from \eqref{eq:48} and \eqref{eq:44}, we will split B because it is the one with the highest information gain.\\
 3.8c)\\
 
 \begin{tikzpicture}
