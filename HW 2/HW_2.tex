@@ -17,7 +17,10 @@
     state/.style ={ellipse, draw, minimum width = 0.3 cm}, % the minimum width is the width of the ellipse, which is the size of the shape of vertex in the node graph  
     point/.style = {circle, draw, inner sep=0.18cm, fill, node contents={}},  
     bidirected/.style={Latex-Latex,dashed}, % it is the edge having two directions  
-    el/.style = {inner sep=2.5pt, align=right, sloped}
+    el/.style = {inner sep=2.5pt, align=right, sloped},
+    arn_r/.style = {treenode, circle, red, draw=red,
+    arn_x/.style = {treenode, rectangle, draw=black,
+    minimum width=2.5em, minimum height=1.5em}% arbre rouge noir, nil
 }
 \setlength{\parskip}{12pt}
 \title{Home Work 1 Undergraduate}
@@ -207,24 +210,28 @@ As seen from \eqref{eq:23},when Y is 0, we see that there is a min of 15 errors 
 Since both are about the same, the node split can be choosen arbirtarly\par
 The 2 level decision tree looks like this\\
 \begin{tikzpicture}
-  \node[state](a) at (0,0) {Z};
-  
-  \node[state](b)[below left =of a]{X/Y};  
-  \node[state](c)[below right =of a]{X/Y};
-  
-  \node[state](d)[below left =of b]{C2};  
-  \node[state](e)[below =of b]{C2};
-  
-  \node[state](f)[below =of c]{C1};  
-  \node[state](g)[below right =of c]{C1};
-  
-  \path[->,draw,thick]
-  (a)edge node{0}(b)
-  (a)edge node{1}(c)
-  (b)edge node{0}(d) 
-  (b)edge node{1}(e)
-  (c)edge node{0}(f) 
-  (c)edge node{1}(g) ;
+[->,>=stealth',level/.style={sibling distance = 3cm/#1,
+  level distance = 1.5cm}] 
+\node [arn_x] {Z}
+    child{ node [arn_x] {Y or Z} 
+            child{ node [arn_r] {C2}
+            edge from parent node [above] {0}
+            }
+            child{ node [arn_r] {C2}
+            edge from parent node [above] {1}
+            }
+            edge from parent node [above] {0}
+    }
+    child{ node [arn_x]{Y or Z}
+            child{ node [arn_r] {C1}
+                edge from parent node [above] {0}
+            }
+            child{ node [arn_r] {C1}
+                edge from parent node [above] {1}
+            }
+            edge from parent node [above] {1}
+	}
+; 
 \end{tikzpicture}
 \\
 This Decision tree has an error of $frac{15+15+15+15}{200}$, 0.3\\
@@ -254,20 +261,28 @@ As seen from \eqref{eq:27},when Z is 0, we see that there is a min of 15 errors 
 Since Y has the lowest rate of error, we split at Y\\
 The 2 level decision tree will now looks like this\\
 \begin{tikzpicture}
-  \node[state](a) at (0,0) {X};  
-  \node[state](b)[below left =of a]{Y};  
-  \node[state](c)[below right =of a]{Y};  
-  \node[state](d)[below left =of b]{C2};  
-  \node[state](e)[below =of b]{C1};  
-  \node[state](f)[below =of c]{C1};  
-  \node[state](g)[below right =of c]{C2};  
-  \path[->,draw,thick]
-  (a)edge node{0}(b)
-  (a)edge node{1}(c)
-  (b)edge node{0}(d) 
-  (b)edge node{1}(e)
-  (c)edge node{0}(f) 
-  (c)edge node{1}(g) ;
+[->,>=stealth',level/.style={sibling distance = 3cm/#1,
+  level distance = 1.5cm}] 
+\node [arn_x] {X}
+    child{ node [arn_x] {Y} 
+            child{ node [arn_r] {C2}
+            edge from parent node [above] {0}
+            }
+            child{ node [arn_r] {C1}
+            edge from parent node [above] {1}
+            }
+            edge from parent node [above] {0}
+    }
+    child{ node [arn_x]{Y}
+            child{ node [arn_r] {C1}
+                edge from parent node [above] {0}
+            }
+            child{ node [arn_r] {C2}
+                edge from parent node [above] {1}
+            }
+            edge from parent node [above] {1}
+	}
+; 
 \end{tikzpicture}
 \\
 This Decision tree has an error of $frac{5+5+5+5}{200}$, 0.1\\
@@ -421,16 +436,22 @@ From what we see from \eqref{eq:48} and \eqref{eq:44}, we will split B because i
 3.8c)\\
 
 \begin{tikzpicture}
-  \node[state](a) at (0,0) {A};  
-  \node[state](b)[below left =of a]{+};  
-  \node[state](c)[below right =of a]{B};  
-  \node[state](d)[below left=of c]{+};  
-  \node[state](e)[below right=of c]{-}; 
-  \path[->,draw,thick]
-  (a)edge node{T}(b)
-  (a)edge node{F}(c)
-  (c)edge node{T}(d)
-  (c)edge node{F}(e);
+[->,>=stealth',level/.style={sibling distance = 3cm/#1,
+  level distance = 1.5cm}] 
+\node [arn_x] {A}
+    child{ node [arn_r] {+}
+            edge from parent node [above] {F}
+    }
+    child{ node [arn_x]{B}
+            child{ node [arn_r] {+}
+                edge from parent node [above] {T}
+            }
+            child{ node [arn_r] {-}
+                edge from parent node [above] {F}
+            }
+            edge from parent node [above] {T}
+	}
+; 
 \end{tikzpicture}
 \\
 The error rate now can be calculate to be .2 because of all the error each of the end nodes total is 20 of 100.
