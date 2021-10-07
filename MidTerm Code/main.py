@@ -26,7 +26,7 @@ def center_data(name):
     RotData = np.matmul(m, inv_eig_m)
     print ("rotated Dat is")
     print (RotData)
-    
+
 
 if __name__ == '__main__':
     center_data('Data.txt')
