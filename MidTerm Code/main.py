@@ -23,9 +23,9 @@ def center_data(name):
     print (cn)
     eig_m = eigen(cn)
     inv_eig_m = np.linalg.inv(eig_m)
-    RotData = np.matmul(m, inv_eig_m)
+    rot_data = np.matmul(m, inv_eig_m)
     print ("rotated Dat is")
-    print (RotData)
+    print (rot_data)
     
 
 if __name__ == '__main__':
