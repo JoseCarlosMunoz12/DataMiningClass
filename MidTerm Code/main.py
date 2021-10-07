@@ -2,6 +2,9 @@ import numpy as np
 
 
 def eigen(cov):
+    poly = np.poly(cov)
+    print ("Characteristic polynomial is")
+    print(poly)
     w, v = np.linalg.eig(cov)
     print ("Printing the Eigen values of the Given square array:\n", w)
     print ("Printing the Eigen Vectors of the Given square array:\n", v)
