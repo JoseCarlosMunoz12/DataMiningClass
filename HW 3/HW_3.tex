@@ -39,7 +39,7 @@
     Jose Carlos Munoz
 \end{center}%===============================
 \par
-Problem 2)\\
+Problem 1)\\
 The First thing we have to do is to Create 4 differnet contingency tables for the 4 different possible splits
 \begin{equation}\tag{1}\label{eq:1}
 \begin{split}
@@ -169,5 +169,95 @@ Once all values are found, we add them all up and get our $\mathcal{X}^2$.
 Once we founde these values we find the degrees of freedom for alll of them and see what is th corresponding critical $\mathcal{X}^2$ value. Age is the only one with a different degree of freedom , the other attributes have the same degree of freedom. For age, the Degree of freedom is 4, the rest have  a degree of freedom of 2. So for Age its Critical $\mathcal{X}^2$ value is 9.488 and the rest are 5.991.\\
 We can now say that we are able to split this node because of all the $\mathcal{X}^2$ values, 2 are higher than the critical value. Which means we can split from either of these. We split in the Tear Production attribute becuse it has the highest $\mathcal{X}^2$ value from either options.
 \par
-Problem 3
+Problem 2\\
+The Tree is over fitted because at node n=1,s=5, h= 0, it is splitting to a complex  structure with a very simple sample size.\\
+To determine if we need to see if that node needs to be splitted, we would have to see attributes in there along with the observes results there.
+\begin{equation}\tag{1}\label{eq:5}
+\begin{split}
+\mbox{Node TPR}_{Normal} &=
+\begin{array}{c|c|c|c}
+ \mbox{Age}  & \mbox{SP}& \mbox{A} & \mbox{RCL}\\
+ \hline
+ \mbox{Y}    & \mbox{M} & \mbox{N} & \mbox{S} \\
+ \mbox{Y}    & \mbox{M} & \mbox{Y} & \mbox{H} \\
+ \mbox{Y}    & \mbox{H} & \mbox{N} & \mbox{S} \\
+ \mbox{Y}    & \mbox{H} & \mbox{Y} & \mbox{H} \\
+ \mbox{Pre}  & \mbox{M} & \mbox{N} & \mbox{S} \\
+ \mbox{Pre}  & \mbox{M} & \mbox{Y} & \mbox{H} \\
+ \mbox{Pre}  & \mbox{H} & \mbox{N} & \mbox{S} \\
+ \mbox{Pre}  & \mbox{H} & \mbox{Y} & \mbox{N} \\
+ \mbox{Pres} & \mbox{M} & \mbox{N} & \mbox{N} \\
+ \mbox{Pres} & \mbox{M} & \mbox{Y} & \mbox{H} \\
+ \mbox{Pres} & \mbox{H} & \mbox{N} & \mbox{S} \\
+ \mbox{Pres} & \mbox{H} & \mbox{Y} & \mbox{N} 
+\end{array}
+\\
+\\
+\mbox{Node A}_{No} &=
+\begin{array}{c|c|c}
+ \mbox{Age}  & \mbox{SP}& \mbox{RCL}\\
+ \hline
+ \mbox{Y}    & \mbox{M} & \mbox{S} \\
+ \mbox{Y}    & \mbox{H} & \mbox{S} \\
+ \mbox{Pre}  & \mbox{M} & \mbox{S} \\
+ \mbox{Pre}  & \mbox{H} & \mbox{S} \\
+ \mbox{Pres} & \mbox{M} & \mbox{N} \\
+ \mbox{Pres} & \mbox{H} & \mbox{S} 
+\end{array}
+\end{split}
+\end{equation}
+From this Node we create a contigency table to See if it is worth splitting for either Attributes
+\begin{equation}\tag{2}\label{eq:6}
+\begin{split}
+\mbox{Age} &= 
+\begin{array}{c|ccc|c}
+\mbox{Age}   & \mbox{None} & \mbox{Soft} & \mbox{Hard} & \\
+\hline
+\mbox{Young} & 0 & 2 & 0 & 2 \\
+\mbox{Pre}     & 0 & 2 & 0 & 2\\
+\mbox{Pres}   & 1 & 1 & 0 & 2\\
+\hline
+\Sigma           & 1 & 5 & 0 & 6
+\end{array}
+\\
+\\
+\mbox{SP} &= 
+\begin{array}{c|ccc|c}
+\mbox{SP}   & \mbox{None} & \mbox{Soft} & \mbox{Hard} & \\
+\hline
+\mbox{M} & 1 & 2 & 0 & 3 \\
+\mbox{H} & 0 & 3 & 0 & 3\\
+\hline
+\Sigma     & 1 & 5 & 0 & 6
+\end{array}
+\end{split}
+\end{equation}
+From both tables we can remove the last column as we can not physically split into that node.
+so our table now looks like this
+\begin{equation}\tag{2}\label{eq:6}
+\begin{split}
+\mbox{Age} &= 
+\begin{array}{c|cc|c}
+\mbox{Age}   & \mbox{None} & \mbox{Soft} & \\
+\hline
+\mbox{Young} & 0 & 2 & 2 \\
+\mbox{Pre}     & 0 & 2 & 2\\
+\mbox{Pres}   & 1 & 1 & 2\\
+\hline
+\Sigma           & 1 & 5 & 6
+\end{array}
+\\
+\\
+\mbox{SP} &= 
+\begin{array}{c|cc|c}
+\mbox{SP}   & \mbox{None} & \mbox{Soft}& \\
+\hline
+\mbox{M} & 1 & 2 & 3 \\
+\mbox{H} & 0 & 3 & 3\\
+\hline
+\Sigma     & 1 & 5 & 6
+\end{array}
+\end{split}
+\end{equation}
+We then calculate the Expected table to see what the results we expet are
 \end{document}
