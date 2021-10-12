@@ -90,3 +90,5 @@ $ chi Values
 \mathcal{X}^{2} = 1\frac{8}{30}
 \mathcal{X}^{2} = 9\frac{2}{30}
 \mathcal{X}^{2} = 14\frac{4}{10}
+1)this node can be split becase the Chi values for As and TRB are higher than the critical Value. From these two options the TRB will be node to split because
+it has the highest Chi Value of both avaliable options
