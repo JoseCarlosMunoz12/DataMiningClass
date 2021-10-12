@@ -1,0 +1,92 @@
+$These need to be in a Math Environment for it to work
+\begin{array}{c|ccc|c}
+\mbox{Age}   & \mbox{None} & \mbox{Soft} & \mbox{Hard} & \\
+\hline
+\mbox{Young} & 4           & 2           & 2           &  8\\
+\mbox{Pre}   & 5           & 2           & 1           &  8\\
+\mbox{Pres}  & 6           & 1           & 1           &  8\\
+\hline
+\Sigma       & 15          & 5           & 4           & 24\\
+\end{array}
+
+\begin{array}{c|ccc|c}
+\mbox{Spect} & \mbox{None} & \mbox{Soft} & \mbox{Hard} & \\
+\hline
+\mbox{M}     & 7           & 2           & 3           & 12\\
+\mbox{H}     & 8           & 3           & 1           & 12\\
+\hline
+\Sigma       & 15          & 5           & 4           & 24\\
+\end{array}
+
+\begin{array}{c|ccc|c}
+\mbox{Ast}   & \mbox{None} & \mbox{Soft} & \mbox{Hard} & \\
+\hline
+\mbox{Y}     & 8           & 0           & 4           & 12\\
+\mbox{N}     & 4           & 5           & 0           & 12\\
+\hline
+\Sigma       & 15          & 5           & 4           & 24\\
+\end{array}
+
+\begin{array}{c|ccc|c}
+\mbox{TRB}   & \mbox{None} & \mbox{Soft} & \mbox{Hard} & \\
+\hline
+\mbox{N}     & 3           & 5           & 4           & 12\\
+\mbox{R}     & 12          & 0           & 0           & 12\\
+\hline
+\Sigma       & 15          & 5           & 4           & 24\\
+\end{array}
+$Expected arrays for HW
+\begin{array}{c|ccc}
+\mbox{Age_{Exptected}}   & \mbox{None} & \mbox{Soft} & \mbox{Hard}\\
+\hline
+\mbox{Young} & 5 & \frac{5}{3} & \frac{4}{3}\\
+\mbox{Pre}   & 5 & \frac{5}{3} & \frac{4}{3}\\
+\mbox{Pres}  & 5 & \frac{5}{3} & \frac{4}{3}\\
+\end{array}
+
+\begin{array}{c|ccc}
+\mbox{Spect_{Exptected}} & \mbox{None} & \mbox{Soft} & \mbox{Hard}\\
+\hline
+\mbox{M}     & 7.5 & 2.5 & 2 \\
+\mbox{H}     & 7.5 & 2.5 & 2 \\
+\end{array}
+
+\begin{array}{c|ccc}
+\mbox{Ast_{Exptected}}   & \mbox{None} & \mbox{Soft} & \mbox{Hard}\\
+\hline
+\mbox{Y}     & 7.5 & 2.5 & 2 \\
+\mbox{N}     & 7.5 & 2.5 & 2 \\
+\end{array}
+
+\begin{array}{c|ccc}
+\mbox{TRB_{Exptected}}   & \mbox{None} & \mbox{Soft} & \mbox{Hard}\\
+\hline
+\mbox{N}     & 7.5 & 2.5 & 2 \\
+\mbox{R}     & 7.5 & 2.5 & 2 \\
+\end{array}
+$ (o-e)^2/e arrays
+\begin{array}{ccc}
+\frac{1}{5} & \frac{1}{5}  & \frac{1}{3} \\
+0           & \frac{1}{15} & \frac{1}{12} \\
+\frac{1}{5} & \frac{4}{15} & \frac{1}{12} \\
+\end{array}
+
+\begin{array}{ccc}
+\frac{1}{30} & \frac{1}{10} & \frac{1}{2} \\
+\frac{1}{30} & \frac{1}{10} & \frac{1}{2} \\
+\end{array}
+
+\begin{array}{ccc}
+\frac{1}{30} & 2\frac{1}{2} & 2 \\
+\frac{1}{30} & 2\frac{1}{2} & 2 \\
+\end{array}
+
+\begin{array}{ccc}
+2\frac{7}{10} & 2\frac{1}{2} & 2 \\
+2\frac{7}{10} & 2\frac{1}{2} & 2 \\
+\end{array}
+$ chi Values
+\mathcal{X}^{2} = 3\frac{2}{15}
+\mathcal{X}^{2} = 1\frac{8}{30}
+\mathcal{X}^{2} = 9\frac{2}{30}
+\mathcal{X}^{2} = 14\frac{4}{10}
