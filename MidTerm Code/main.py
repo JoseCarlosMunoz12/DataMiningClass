@@ -11,7 +11,7 @@ def z_func(pa, pb, n):
 
 def center_data(name):
     m = np.loadtxt(name, dtype=None, delimiter=",")
-    units = [[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]
+    units = [[1, 1], [1, 2], [1, 3], [2, 1], [2, 2], [2, 3], [3, 1], [3, 2], [1, 3]]
     for items in units:
         ans = [0, 0, 0]
         for val in m:
@@ -19,6 +19,8 @@ def center_data(name):
             print(z)
             if z > 1.96:
                 ans[0] += 1
+            elif z < -1.96
+                ans[1] += 1
             else:
                 ans[1] += 1
         print(ans)

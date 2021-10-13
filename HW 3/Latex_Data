@@ -61,6 +61,14 @@ $Expected arrays for HW
 \begin{array}{c|ccc}
 \mbox{TRB_{Exptected}}   & \mbox{None} & \mbox{Soft} & \mbox{Hard}\\
 \hline
+$ Array for the G question for comparing peformance
+\begin{array}{c|ccc}
+\mbox{-}& \mbox{DT} & \mbox{GD} & \mbox{V}\\
+\hline
+\mbox{DT} & \left[ 0,0,23 \right]& \left[ 10,2,11\right]& \left[ 2,6,15 \right]\\
+\mbox{GD} & \left[ 2,10,11\right]& \left[ 0,0,23 \right]& \left[ 0,8,15 \right]\\
+\mbox{V}  & \left[ 6,2,15 \right]& \left[ 8,0,15 \right]& \left[ 0,0,23 \right]
+\end{array}
 \mbox{N}     & 7.5 & 2.5 & 2 \\
 \mbox{R}     & 7.5 & 2.5 & 2 \\
 \end{array}
