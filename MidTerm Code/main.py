@@ -18,6 +18,8 @@ def center_data(name):
             z = z_func(val[items[0]], val[items[1]], val[0])
             if z > 1.96:
                 ans[0] += 1
+            elif z < -1.96
+                ans[1] += 1
             else:
                 ans[1] += 1
         print(ans)
