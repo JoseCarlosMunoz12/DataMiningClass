@@ -259,5 +259,64 @@ so our table now looks like this
 \end{array}
 \end{split}
 \end{equation}
-We then calculate the Expected table to see what the results we expet are
+We then calculate the Expected table to see what the results we expect are
+\begin{equation}\tag{3}\label{eq:7}
+\begin{split}
+\mbox{Age} &= 
+\begin{array}{|cc|}
+ \mbox{None} & \mbox{Soft}\\
+\hline
+ \frac{1}{3} & \frac{5}{3}\\
+\hline
+ \frac{1}{3} & \frac{5}{3}\\
+\hline
+ \frac{1}{3} & \frac{5}{3}\\
+\hline
+\end{array}
+\\
+\\
+\mbox{SP} &= 
+\begin{array}{|cc|}
+ \mbox{None} & \mbox{Soft}\\
+\hline
+ \frac{1}{2} & 2\frac{1}{2}\\
+\hline
+ \frac{1}{2} & 2\frac{1}{2}\\
+\hline
+\end{array}
+\end{split}
+\end{equation}
+Now we can calculate the $\mathcal{X}^2$
+
+\begin{equation}\tag{3}\label{eq:7}
+\begin{split}
+\mbox{Age} &= 
+\begin{array}{|cc|}
+ \mbox{None} & \mbox{Soft}\\
+\hline
+1\frac{1}{3} & \frac{1}{15}\\
+\hline
+ 1\frac{1}{3} & \frac{1}{15}\\
+\hline
+ \frac{1}{3} & \frac{4}{15}\\
+\hline
+\end{array}
+\\
+\mathcal{X}^2 &= 3.4\\
+\\
+\\
+\mbox{SP} &= 
+\begin{array}{|cc|}
+ \mbox{None} & \mbox{Soft}\\
+\hline
+ \frac{1}{2} & 2\frac{1}{10}\\
+\hline
+ \frac{1}{2} & 2\frac{1}{10}\\
+\hline
+\end{array}
+\\
+\mathcal{X}^2 &=1.2
+\end{split}
+\end{equation}
+The degree of freedom for the age is 2 and the degree of freedom for the SP is 1. Their critical $\mathcal{X}^2$ respectivly with a 0.05 confidence level is 5.991 and 3.841 respectively. From this, we can conclude that there is no point of splitting this node because their $\mathcal{X}^2$ value is well below their respective critical value. Therefore making this split unnecessary.
 \end{document}

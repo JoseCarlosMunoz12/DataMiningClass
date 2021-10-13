@@ -1,35 +1,27 @@
+import math
 import numpy as np
 
 
-def eigen(cov):
-    poly = np.poly(cov)
-    print ("Characteristic polynomial is")
-    print(poly)
-    w, v = np.linalg.eig(cov)
-    print ("Printing the Eigen values of the Given square array:\n", w)
-    print ("Printing the Eigen Vectors of the Given square array:\n", v)
-    return v.transpose()
+def z_func(pa, pb, n):
+    diff = pa - pb
+    p = (pa + pb) / 2.0
+    dev = math.sqrt((2 * p * (1 - p)) / n)
+    return diff / dev
 
 
 def center_data(name):
-    m = np.loadtxt(name, dtype='i', delimiter=",")
-    cm = np.mean(m, axis=0)
-    print (cm)
-    x_norm = m - np.mean(m, axis=0)
-    print("Center Data is:")
-    print (x_norm)
-    x_norm_t = x_norm.transpose()
-    cn = np.matmul(x_norm_t, x_norm)
-    x, y = cn.shape
-    cn = (1. / (x - 1.)) * cn
-    print ("Covariance is:")
-    print (cn)
-    eig_m = eigen(cn)
-    inv_eig_m = np.linalg.inv(eig_m)
-    rot_data = np.matmul(m, inv_eig_m)
-    print ("rotated Dat is")
-    print (rot_data)
-    
+    m = np.loadtxt(name, dtype=None, delimiter=",")
+    units = [[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]
+    for items in units:
+        ans = [0, 0, 0]
+        for val in m:
+            z = z_func(val[items[0]], val[items[1]], val[0])
+            if z > 1.96:
+                ans[0] += 1
+            else:
+                ans[1] += 1
+        print(ans)
+
 
 if __name__ == '__main__':
     center_data('Data.txt')
