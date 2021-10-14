@@ -7,7 +7,8 @@ a<-dim(Gl)
 set.seed(2)
 x<-sample(1:a[1],a[1]/3,F) #randomly select record numbers
 y<-as.integer(as.set(1:a[1])-as.set(x)) # take a complement
-Train.Gl<-Gl[y,];Test.Gl<-Gl[x,] # TL training set; TC testing set
+Train.Gl<-Gl[y,]
+Test.Gl<-Gl[x,] # TL training set; TC testing set
 Gl.tree <- ctree(Class ~ ., data =Train.Gl) #build a tree model w TL
 Gl.tree
 plot(Gl.tree)
