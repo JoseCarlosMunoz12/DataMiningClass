@@ -72,6 +72,8 @@ $ Array for the G question for comparing peformance
 \mbox{N}     & 7.5 & 2.5 & 2 \\
 \mbox{R}     & 7.5 & 2.5 & 2 \\
 \end{array}
+$;;;;
+The tree ar no the same size. The CART based tree is significantly higher than the C.4.5 tree. This is because the  CART decisoin tree uses GINI impurity;focusing on which node has the lowest impurity. While the C.4.5 prioritzes Information gain from Entropy. The CART one is marignally better accuracy compared to the C.4.5
 $ (o-e)^2/e arrays
 \begin{array}{ccc}
 \frac{1}{5} & \frac{1}{5}  & \frac{1}{3} \\
