@@ -13,8 +13,8 @@ CART_Model <- rpart(class~., data = d_TrD, method = "class")                #cre
 plot(C45_Model)  #Plot C45 Tree
 plot(CART_Model) #Plot CART Tree
 
-C45_res <-predict(C45_Model,newdata= d_TeD)   #Test data with C45 Decision Tree
-CART_res <- predict(CART_Model,newdata=d_TeD) #Test data with CART Decision Tree
+C45_res <-predict(C45_Model,newdata=d_TeD)   #Test data with C45 Decision Tree
+CART_res <- predict(CART_Model,newdata=d_TeD, type="class") #Test data with CART Decision Tree
 
 table(d_TeD$class,C45_res,dnn = c("actual","predicted"))  #Display Results of the test for C45 
 table(d_TeD$class,CART_res,dnn = c("actual","predicted")) #Display Results of the test for CART
