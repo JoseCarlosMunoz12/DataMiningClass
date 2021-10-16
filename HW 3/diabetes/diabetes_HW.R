@@ -2,6 +2,7 @@ library(sets)
 library(rpart)
 library(partykit)
 library(RWeka)
+library(rattle)
 D_Data <-read.csv(file="diabetes.csv",header=TRUE)
 D_Data$class <-as.factor(D_Data$class)
 set.seed(500)
@@ -13,8 +14,8 @@ plot(C45_Model)  #Plot C45 Tree
 ret <-predict(C45_Model,newdata= d_TeD)
 table(d_TeD$class,ret,dnn = c("actual","predicted"))
 ans <- 100 * sum(ret==d_TeD$class) / dim(d_TeD)[1]
-tree <- ctree(class~., data = d_TrD)
-results <- predict(tree,newdata=d_TeD)
-plot(tree)
-table(d_TeD$class,results,dnn = c("actual","predicted"))
-cans <- 100 * sum(results==d_TeD$class) / dim(d_TeD)[1]
+CART <- rpart(class~., data = d_TrD,method="class")
+res <- predict(CART,newdata = d_TeD,type="class")
+fancyRpartPlot(CART)
+table(d_TeD$class,res,dnn = c("actual","predicted"))
+cans <- 100 * sum(res==d_TeD$class) / dim(d_TeD)[1]
