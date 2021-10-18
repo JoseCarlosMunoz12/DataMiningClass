@@ -14,7 +14,7 @@ C45_Model <- J48(class~., data= d_TrD,control = Weka_control(U=TRUE,M=5))   # Cr
 CART_Model <- rpart(class~., data = d_TrD, method = "class")                #create a tree for the CART
 
 plot(C45_Model,unicorm=TRUE)  #Plot C45 Tree
-plot(CART_Model,uniform=TRUE) #Plot CART Tree
+rpart.plot(CART_Model,uniform=TRUE) #Plot CART Tree
 
 C45_res <-predict(C45_Model,newdata=d_TeD)   #Test data with C45 Decision Tree
 CART_res <- predict(CART_Model,newdata=d_TeD, type="class") #Test data with CART Decision Tree
