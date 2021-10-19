@@ -29,4 +29,7 @@ CART_ac <- 100 * sum(CART_res==d_TeD$class) / dim(d_TeD)[1] #CART accuracy
 cat("C45 has an accuracy of ", C45_ac)
 cat("CART has an accuracy of ", CART_ac)
 
+#6)The Trees are not the same. The C45 tree is much more complex compare to that of the CART.
+#This is because the 
+#
 #
