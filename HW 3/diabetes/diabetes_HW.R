@@ -4,7 +4,7 @@ library(rpart.plot)
 library(partykit)
 library(RWeka)
 
-set.seed(500)
+set.seed(5)
 D_Data <- read.csv(file = "diabetes.csv", header = TRUE)
 D_Data$class <- as.factor((D_Data$class))
 ind <- sample(2,nrow(D_Data),replace = TRUE,prob = c(2/3,1/3))
@@ -26,3 +26,7 @@ table(d_TeD$class,CART_res,dnn = c("actual","predicted")) #Display Results of th
 C45_ac <- 100 * sum(C45_res==d_TeD$class) / dim(d_TeD)[1]  #C45 accuracy
 CART_ac <- 100 * sum(CART_res==d_TeD$class) / dim(d_TeD)[1] #CART accuracy
 
+cat("C45 has an accuracy of ", C45_ac)
+cat("CART has an accuracy of ", CART_ac)
+
+#
