@@ -30,6 +30,6 @@ cat("C45 has an accuracy of ", C45_ac)
 cat("CART has an accuracy of ", CART_ac)
 
 #6)The Trees are not the same. The C45 tree is much more complex compare to that of the CART.
-#This is because the 
-#
+#This is because the C45 prioritizes ndoes that gain the most information, while the CART cares about which split is the most pure. The accuracies are not the same
+#But they do not differ widely too much.
 #
