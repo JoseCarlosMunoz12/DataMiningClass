@@ -38,7 +38,7 @@
     \large
     Jose Carlos Munoz
 \end{center}%===============================
-4.6)a)\\
+4.6)a\\
 \begin{equation}\tag{1}\label{eq:1}
 \begin{split}
 P(\mbox{S}\vert \mbox{UG}) &= .15 \\
@@ -47,7 +47,8 @@ P(G) &= .2\\
 P(UG) &= .8
 \end{split}
 \end{equation}
-These are the known probabilites. From this we can find $P(\mbox{G}\vert \mbox{S})$.\\
+These are the known probabilites.\\
+ From this we can find $P(\mbox{G}\vert \mbox{S})$.\\
 Because of Bayes Theroem  $P(\mbox{G}\vert \mbox{S})$ is the same as the following
 \begin{equation}
 P(\mbox{G}\vert \mbox{S}) = \frac{P(\mbox{S} \vert \mbox{G}) * P(\mbox{G})}{P(\mbox{S})}
@@ -67,5 +68,72 @@ P(\mbox{G}\vert \mbox{S}) &= \frac{.23 * .2}{.166}\\
 P(\mbox{G}\vert \mbox{S}) &= .277\\
 \end{split}
 \end{equation}
-
+ So the probabilty that a smoker is a graduate student is .277\par
+ 4.6)c\\
+The probability that a smoker is a graduated student  can be written as  $P(\mbox{UG}\vert \mbox{S})$.\\
+\begin{equation}
+\begin{split}
+P(\mbox{UG}\vert \mbox{S}) &=  \frac{P(\mbox{S} \vert \mbox{UG}) * P(\mbox{UG})}{P(\mbox{S})}\\
+P(\mbox{UG}\vert \mbox{S}) &=\frac{.23 * .8}{.277}\\
+P(\mbox{UG}\vert \mbox{S}) &=.857\\
+\end{split}
+\end{equation}
+ So the probabilty that a smoker is an undergrad is  .857.\\
+ Since $P(\mbox{UG}\vert \mbox{S}) > P(\mbox{G}\vert \mbox{S})$ 
+ we can conclude we have a higher chance of finding an undergrad that is a smoker\par
+ 4.6)d\\
+\begin{equation}
+\begin{split}
+P(\mbox{D}\vert \mbox{UG}) &= .1\\
+P(\mbox{D}\vert \mbox{G}) &= .3\\
+P(\mbox{D}) &= P(\mbox{D}\vert \mbox{UG}) * P(\mbox{UG})+ P(\mbox{D}\vert \mbox{G}) *  P(\mbox{G})\\
+P(\mbox{D}) &= 0.1 * .8 + .2 * .3\\
+P(\mbox{D}) &= .14\\
+P(\mbox{D,S} \vert \mbox{G}) &=P(\mbox{D}\vert \mbox{G}) *P(\mbox{S}\vert \mbox{G})\\
+P(\mbox{D,S} \vert \mbox{G}) &= .3 * .23\\
+P(\mbox{D,S} \vert \mbox{G}) &= .069\\
+P(\mbox{D,S} \vert \mbox{UG}) &=P(\mbox{D}\vert \mbox{UG}) *P(\mbox{S}\vert \mbox{UG})\\
+P(\mbox{D,S} \vert \mbox{UG}) &= .1 * .15\\
+P(\mbox{D,S} \vert \mbox{UG}) &=0.015\\
+P(\mbox{D,S}) &= Q
+\end{split}
+\end{equation}
+These are the known probabilites. Since we don't know what $P(\mbox{D,S})$ is, we set it as a constant Q\\
+Now we can find the values for $P(\mbox{G}\vert \mbox{D,S})$ and $P(\mbox{UG}\vert \mbox{D,S})$\\
+\begin{equation}
+\begin{split}
+P(\mbox{UG}\vert \mbox{D,S}) &=  \frac{P(\mbox{D,S} \vert \mbox{UG}) * P(\mbox{UG})}{P(\mbox{D,S})}\\
+P(\mbox{UG}\vert \mbox{D,S}) &=\frac{.015 * .8}{Q}\\
+P(\mbox{UG}\vert \mbox{D,S}) &=\frac{.012}{Q}\\
+P(\mbox{G}\vert \mbox{D,S}) &=  \frac{P(\mbox{D,S} \vert \mbox{UG}) * P(\mbox{UG})}{P(\mbox{D,S})}\\
+P(\mbox{G}\vert \mbox{D,S}) &=\frac{.069 *.2}{Q}\\
+P(\mbox{G}\vert \mbox{D,S}) &=\frac{.0139}{Q}\\
+\end{split}
+\end{equation}
+From these results we can conclude that the chance that we find a graduate that lives in a dorm and is a smoker is  is higher than the chance that we find an undergraduate that lives in a dorm and is a smoker.\par
+4.7)a\\
+\begin{equation}
+\begin{split}
+P(\mbox{A=0} \vert +) &= \frac{2}{5} = .4\\
+P(\mbox{A=0} \vert -) &= \frac{3}{5} = .6\\
+P(\mbox{A=1} \vert +) &= \frac{3}{5} = .6\\
+P(\mbox{A=1} \vert -) &= \frac{2}{5} = .4\\
+P(\mbox{B=0} \vert +) &= \frac{4}{5} = .8\\
+P(\mbox{B=0} \vert -) &= \frac{3}{5} = .6\\
+P(\mbox{B=1} \vert +) &= \frac{1}{5} = .2\\
+P(\mbox{B=1} \vert -) &= \frac{2}{5} = .4\\
+P(\mbox{C=0} \vert +) &= \frac{3}{5} = .6\\
+P(\mbox{C=0} \vert -) &= \frac{0}{5} = 0\\
+P(\mbox{C=1} \vert +) &= \frac{2}{5} = .4\\
+P(\mbox{C=1} \vert -) &= \frac{5}{5} = .1
+\end{split}
+\end{equation}
+\par
+4.7)b\\
+\par
+4.7)c\\
+\par
+4.7)d\\
+\par
+4.7)e
 \end{document}
