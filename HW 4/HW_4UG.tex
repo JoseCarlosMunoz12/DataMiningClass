@@ -43,13 +43,29 @@
 \begin{split}
 P(\mbox{S}\vert \mbox{UG}) &= .15 \\
 P(S\vert G) &= .23\\
-P(G) &= .8\\
-P(UG) &= .2
+P(G) &= .2\\
+P(UG) &= .8
 \end{split}
 \end{equation}
-These are the known probabilites. From this we can find $P(\mbox{}G\vert \mbox{S}$.\\
-Because of Bayes Probabilites we can say
+These are the known probabilites. From this we can find $P(\mbox{G}\vert \mbox{S})$.\\
+Because of Bayes Theroem  $P(\mbox{G}\vert \mbox{S})$ is the same as the following
 \begin{equation}
-P(\mbox{G}\vert \mbox{S}) = \frac{P(\mbox{S} \vert \mbox{G})}{P(\mbox{S})}
+P(\mbox{G}\vert \mbox{S}) = \frac{P(\mbox{S} \vert \mbox{G}) * P(\mbox{G})}{P(\mbox{S})}
 \end{equation}
+$P(\mbox{S})$ can be found as
+\begin{equation}
+\begin{split}
+P(\mbox{S}) &=  P(\mbox{S} \vert \mbox{G}) * P(\mbox{G}) + P(\mbox{S} \vert \mbox{UG}) * P(\mbox{UG})\\
+P(\mbox{S}) &= .23 *.2 + .15 * .8\\
+P(\mbox{S}) &=.166
+\end{split}
+\end{equation}
+Therefore
+\begin{equation}
+\begin{split}
+P(\mbox{G}\vert \mbox{S}) &= \frac{.23 * .2}{.166}\\
+P(\mbox{G}\vert \mbox{S}) &= .277\\
+\end{split}
+\end{equation}
+
 \end{document}
