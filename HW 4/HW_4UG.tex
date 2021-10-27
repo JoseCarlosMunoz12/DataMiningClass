@@ -130,10 +130,69 @@ P(\mbox{C=1} \vert -) &= \frac{5}{5} = .1
 \end{equation}
 \par
 4.7)b\\
+we are task to find $P(\mbox{A=0,B=1,C=0} \vert \mbox{+})$. Using the Bayes Therm we canfind the value as
+\begin{equation}
+\begin{split}
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0,B=1,C=0} \vert \mbox{+}) * P(\mbox{+})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0} \vert \mbox{+}) * P(\mbox{B=1} \vert \mbox{+}) *P(\mbox{C=0} \vert \mbox{+}) * P(\mbox{+})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{.4 * .2 *.6 * .5}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{0.024}{P(\mbox{A=0,B=1,C=0})}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0,B=1,C=0} \vert \mbox{-}) * P(\mbox{-})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0} \vert \mbox{-}) * P(\mbox{B=1} \vert \mbox{-}) *P(\mbox{C=0} \vert \mbox{-}) * P(\mbox{-})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{.6 * .4 *0 * .5}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= 0\\
+\end{split}
+\end{equation}
 \par
+From these results we canconlude that the class label for (A=0, B=1, C=0) will be Class +.\par
 4.7)c\\
+We will be looking at the conditional probabilites for the them all over again with the m-estimate. When m=4 and p = 1/2;
+to find the new Conditonal probabilites we use this equation
+\begin{equation}
+\frac{ n_c + m * p}{n + m}
+\end{equation}
+so now the The conditional probablities will be
+\begin{equation}
+\begin{split}
+P(\mbox{A=0} \vert +) &= \frac{2 + 2}{5 + 4} = \frac{4}{9}\\
+P(\mbox{A=0} \vert -) &= \frac{3 + 2}{5 + 4} = \frac{5}{9}\\
+P(\mbox{A=1} \vert +) &= \frac{3 + 2}{5 + 4} = \frac{5}{9}\\
+P(\mbox{A=1} \vert -) &= \frac{2 + 2}{5 + 4} = \frac{4}{9}\\
+P(\mbox{B=0} \vert +) &= \frac{4 + 2}{5 + 4} = \frac{6}{9}\\
+P(\mbox{B=0} \vert -) &= \frac{3 + 2}{5 + 4} = \frac{5}{9}\\
+P(\mbox{B=1} \vert +) &= \frac{1 + 2}{5 + 4} = \frac{3}{9}\\
+P(\mbox{B=1} \vert -) &= \frac{2 + 2}{5 + 4} = \frac{4}{9}\\
+P(\mbox{C=0} \vert +) &= \frac{3 + 2}{5 + 4} = \frac{5}{9}\\
+P(\mbox{C=0} \vert -) &= \frac{0 + 2}{5 + 4} = \frac{2}{9}\\
+P(\mbox{C=1} \vert +) &= \frac{2 + 2}{5 + 4} = \frac{4}{9}\\
+P(\mbox{C=1} \vert -) &= \frac{5 + 2}{5 + 4} = \frac{7}{9}
+\end{split}
+\end{equation}
 \par
 4.7)d\\
+we repeat b) but with the m-estimate conditional probabilities
+\begin{equation}
+\begin{split}
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0,B=1,C=0} \vert \mbox{+}) * P(\mbox{+})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0} \vert \mbox{+}) * P(\mbox{B=1} \vert \mbox{+}) *P(\mbox{C=0} \vert \mbox{+}) * P(\mbox{+})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{\frac{4}{9} * \frac{3}{9} *\frac{5}{9} * .5}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{+} \vert \mbox{A=0,B=1,C=0}) &= \frac{0.0142}{P(\mbox{A=0,B=1,C=0})}\\
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0,B=1,C=0} \vert \mbox{-}) * P(\mbox{-})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{P(\mbox{A=0} \vert \mbox{-}) * P(\mbox{B=1} \vert \mbox{-}) *P(\mbox{C=0} \vert \mbox{-}) * P(\mbox{-})}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{\frac{5}{9} * \frac{4}{9} *\frac{2}{9} .5}{P(\mbox{A=0,B=1,C=0})}\\
+P(\mbox{-} \vert \mbox{A=0,B=1,C=0}) &= \frac{0.0274}{P(\mbox{A=0,B=1,C=0})}\\
+\end{split}
+\end{equation}
+From these resutl we canconlude that the class label for (A=0,B=1,C=0) is class +\\
 \par
-4.7)e
+4.7)e\\
+The better method would be the m-estimate becuase we do not want our entire expression to be zero
 \end{document}
