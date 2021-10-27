@@ -38,6 +38,30 @@
     \large
     Jose Carlos Munoz
 \end{center}%===============================
+3.10)
+To find the cost function of both of the Decision tree we use this formula.
+\begin{equation}
+F_x(n) = \mbox{Nodes} * \log_{2}m + \mbox{Leafs} * \left [ \log_{2}k \right] + \mbox{Errors} *\log_{2} n\\
+\end{equation}
+Where m is the number of Attributes, k is the number of classes and n is the unkown Sample size. Which are 16, 3 and n respectivley\\
+Now we find the cost function for decision Tree A, where Nodes = 2, Leafs = 3, 7 errors
+\begin{equation}\tag{a}\label{eq:a}
+\begin{split}
+F_a(n) &= 2 * \log_{2}16 + 3 * \left [ \log_{2}3 \right] + 7 *\log_{2} n\\
+F_a(n) &= 2 * 4 + 3 * 2 + 7 *\log_{2} n\\
+F_a(n) &= 8 + 6 + 7 *\log_{2} n\\
+F_a(n) &= 14 + 7 *\log_{2} n\\
+\end{split}
+\end{equation}
+Now we find the cost function for decision Tree b, where Nodes = 2, Leafs = 3, and 4 errors.
+\begin{equation}\tag{b}\label{eq:b}
+\begin{split}
+F_b(n) &= 4 * \log_{2}16 + 5 * \left [ \log_{2}3 \right] + 4 *\log_{2} n\\
+F_b(n) &= 4 * 4 + 5 * 2 + 4 *\log_{2} n\\
+F_b(n) &= 16 + 10 + 4 *\log_{2} n\\
+F_b(n) &= 26 + 4 *\log_{2} n\\
+\end{split}
+\end{equation}
 4.6)a\\
 \begin{equation}\tag{1}\label{eq:1}
 \begin{split}
