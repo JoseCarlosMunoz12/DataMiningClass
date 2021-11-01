@@ -166,5 +166,73 @@ c & 1 & 0  & -3 & 1\\
 d& 4 & 2  & 3 & -1\\
 \end{array}
 \end{equation}
+We start with a $\vec{w} = \{ 0,0,0\}$ and $\eta = 1$. We iterate until $\vec{w}$ can classified them all correctly. To solve for the  right weight vector we iterate wtih the following equation until it can classified each data point accurately.
+\begin{equation*}
+\vec{w}_{n+1} = \vec{w}_n + \eta * y_a * \vec{a}
+\end{equation*}
+So we iterate until All 4 data points can be classified correctly\\
+Step 1)
+\begin{equation}\tag{1}
+\begin{split}
+\vec{w}_{1} &= \{0,0,0\}+ (1) * (-1) * \{4,3,6 \}\\
+&= \{-4,-3,-6 \}
+\end{split}
+\end{equation}
 
+Step 2)
+\begin{equation*}
+\begin{split}
+v&= \vec{w}_1* \vec{2,-2,3}\\
+&= -20
+\end{split}
+\end{equation*}
+Since the value is not the same sign as 1 we iterate to the equation.
+\begin{equation}\tag{2}
+\begin{split}
+\vec{w}_{2} &= \{-4,-3,-6\}+ (1) * (1) * \{2,-2,3 \}\\
+&= \{-2,-5,-3 \}
+\end{split}
+\end{equation}
+
+Step 3)
+\begin{equation*}
+\begin{split}
+v&= \vec{w}_2 * \vec{1,0,-3}\\
+&= 7
+\end{split}
+\end{equation*}
+Since the value is the same sign as 1 we don't iterate we continue to next step\par
+
+Step 4)
+\begin{equation*}
+\begin{split}
+v&= \vec{w}_2 * \vec{4,2,3}\\
+&= -27
+\end{split}
+\end{equation*}
+Since the value is the same sign as -1 we don't iterate we continue to next step. Since we reach at the end of the data, we iterate to the top again and see if it works for all.\\
+
+Step 5)
+\begin{equation*}
+\begin{split}
+v&= \vec{w}_2 * \vec{4,3,6}\\
+&= -27
+\end{split}
+\end{equation*}
+Since the value is the same sign as 1 we don't iterate we continue to next step\par
+
+Step 6)
+\begin{equation*}
+\begin{split}
+v&= \vec{w}_2* \vec{2,-2,3}\\
+&= -3
+\end{split}
+\end{equation*}
+Since the value is not the same sign as 1 we iterate to the equation.
+\begin{equation}\tag{2}
+\begin{split}
+\vec{w}_{3} &= \{-2,-5,-3\}+ (1) * (1) * \{2,-2,3 \}\\
+&= \{0,-7,0 \}
+\end{split}
+\end{equation}
 \end{document}
