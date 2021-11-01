@@ -39,5 +39,132 @@
     \large
     Jose Carlos Munoz
 \end{center}%===============================
-first question 
+FISHER LDA)\\
+
+\begin{equation}
+\begin{split}
+X_{0} &= 
+\begin{Bmatrix}
+4 & 2.9 \\
+3 & 6.4 \\
+\end{Bmatrix}\\
+X_{1} &= 
+\begin{Bmatrix}
+2 & 5.10 \\
+2 & 2.15 \\
+\end{Bmatrix}\\
+\mu_0 &= 
+\begin{Bmatrix}
+3.5 & 4.65 \\
+\end{Bmatrix}\\
+\mu_1 &= 
+\begin{Bmatrix}
+2 & 3.625 \\
+\end{Bmatrix}\\
+X_{0}^{C} &= 
+\begin{Bmatrix}
+0.5 & -1.75 \\
+0.5 & 1.75 \\
+\end{Bmatrix}\\
+X_{1}^{C} &= 
+\begin{Bmatrix}
+0 & 1.475 \\
+0 & -1.475 \\
+\end{Bmatrix}\\
+\end{split} 
+\end{equation}
+-
+\begin{equation}
+\begin{split}
+SC_0 &= X_{0}^{CT} * X_{0}^{C}\\
+&= 
+\begin{Bmatrix}
+0.5 & -1.75 \\
+-1.75 & 6.125 \\
+\end{Bmatrix}\\
+SC_1 &= X_{1}^{CT} * X_{1}^{C}\\
+&= 
+\begin{Bmatrix}
+0 & 0 \\
+0 & 4.35125 \\
+\end{Bmatrix}\\
+S_W &= SC_0 + SC_1\\
+&= 
+\begin{Bmatrix}
+0.5 & -1.75 \\
+-1.75 & 10.47625 \\
+\end{Bmatrix}\\
+S_B &= \{ \mu_0 - \mu_1\}^{T} * \{ \mu_0 - \mu_1\}\\
+\{ \mu_0 - \mu_1\} &= 
+\begin{Bmatrix}
+3.5 & 4.65 \\
+\end{Bmatrix}
+ -
+\begin{Bmatrix}
+2 & 3.625 \\
+\end{Bmatrix}\\
+&= 
+\begin{Bmatrix}
+1 & 1.025 \\
+\end{Bmatrix}\\
+S_B &=
+\begin{Bmatrix}
+1        & 1.025 \\
+1.025 & 1.050625 \\
+\end{Bmatrix}\\
+\end{split} 
+\end{equation}
+-
+\begin{equation}
+\begin{split}
+S_{M}^{T} * S_{B} * \vec{w} & = \lambda * \vec{w}\\
+S_{M}^{T} * S_{B} &= 
+\begin{Bmatrix}
+5.6398 & 5.7808 \\
+1.0399 & 1.0654 \\
+\end{Bmatrix}\\
+\begin{Bmatrix}
+5.6398 & 5.7808 \\
+1.0399 & 1.0654 \\
+\end{Bmatrix}
+*\vec{w} &= \lambda * \vec{w}\\
+\lambda_0 &= 6.70564\\
+\lambda_1 &= 4.65e7\\
+\vec{\lambda_0} &= 
+\begin{Bmatrix}
+0.983422 & 0.181330 \\
+\end{Bmatrix}\\
+\vec{w} &= \vec{\lambda_0}\\
+\mu_{\vec{w}}^{0} &= \vec{w} * \mu_0\\
+&= 4.2852\\
+\mu_{\vec{w}}^{1} &= \vec{w} * \mu_1\\
+&= 4.2852\\
+sep &= \frac{\mu_{\vec{w}}^{1} + \mu_{\vec{w}}^{2}}{2}
+sep = 3.4547
+\end{split} 
+\end{equation}
+To classify point (3.8,5) we multiply it by $\vec{w}$ and see if it is less than  or greater than the seperator. If it is less than the seperator then we can conclude that its Class 1 otherwise it is class 0.
+\begin{equation}
+\begin{split}
+val &= \{3.8,5\} * \vec{w}\\
+val &= 3.87243
+\end{split}
+\end{equation}
+the value is greater than the seperator so we classify the value as Class 0\par
+PERCEPTRON\\
+The data is as presented\\
+\begin{equation}
+\begin{array}{c|ccc|c}
+ & X_1 &  X_2  &  X_3 & Y\\
+\hline
+a &4 &  3  &  6 & -1\\
+\hline
+b& 2 &  -2  & 3 & 1\\
+\hline
+c & 1 & 0  & -3 & 1\\
+\hline
+d& 4 & 2  & 3 & -1\\
+\end{array}
+\end{equation}
+
 \end{document}
