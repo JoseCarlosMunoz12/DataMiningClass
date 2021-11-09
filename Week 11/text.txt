@@ -1,0 +1,13 @@
+what will be in the midterm
+3 UG and 1 G question
+Computationally expensive.
+use code to calculate it
+show steps
+same as before
+questions in the exam are based on the following
+*Fisher LDA or Perceptron
+* Naive Bayesn Classifier
+* MDL, find best decision tree w.r.t toe MDL
+for Graduate
+* nearest neighbor classifier
+like hw5
