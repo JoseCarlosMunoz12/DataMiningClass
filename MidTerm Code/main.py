@@ -29,7 +29,7 @@ def wieghts_creation(name):
         for data in m:
             vec = []
             for num in range(mxm[1] - 1):
-                vec.append(0)
+                vec.append(data[x])
             a = np.asarray(vec)
             y = data[mxm[1]-1]
             dict = wieghts(w, a, y, 1, first)
