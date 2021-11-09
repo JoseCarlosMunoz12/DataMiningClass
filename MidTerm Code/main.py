@@ -2,7 +2,7 @@ import math
 import numpy as np
 
 
-def wieghts(w, a, y, n, first):
+def weights(w, a, y, n, first):
     val = w.dot(a)
     print(a)
     print(val)
@@ -10,13 +10,15 @@ def wieghts(w, a, y, n, first):
     if first:
         w = w + r
         return [w, True]
+    if val == 0 and y >= 0:
+        return [w, True]
     if np.sign(y) == np.sign(val):
         return [w, True]
     w = w + r
     return [w, False]
 
 
-def wieghts_creation(name):
+def weights_creation(name):
     m = np.loadtxt(name, dtype=None, delimiter=",")
     first = True
     all_safe = True
@@ -33,11 +35,11 @@ def wieghts_creation(name):
                 vec.append(data[num])
             a = np.asarray(vec)
             y = data[size - 1]
-            ans = wieghts(w, a, y, n, first)
+            ans = weights(w, a, y, n, first)
             w = ans[0]
             print(w)
             print('----')
-            if ans[1] == False:
+            if not ans[1]:
                 all_safe = False
             first = False
         if all_safe:
@@ -47,5 +49,27 @@ def wieghts_creation(name):
             first = False
 
 
+def lda(name):
+    m = np.load(name, dtype=None, delimiter=',')
+    x1 = []
+    x2 = []
+    size = len(m[0])
+    # parse data
+    for data in m:
+        yVal = data[size - 1]
+        vec = []
+        for x in range(size - 1):
+            vec.append(data[x])
+        rs = np.asarray(vec)
+        if yVal == -1:
+            x1.append(rs)
+        else:
+            x2.append(rs)
+    # start LDA
+    
+    print(size)
+
+
 if __name__ == '__main__':
-    wieghts_creation('data.csv')
+    weights_creation('data.csv')
+    # lda('data.csv')
