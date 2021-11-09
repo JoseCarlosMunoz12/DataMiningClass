@@ -38,5 +38,56 @@
     \large
     Jose Carlos Munoz
 \end{center}%===============================
-123
+3.10)\\
+Each Node is describe by the attribue number, Number of child and splitting value.To find the cost function of both of the Decision tree we use this formula.
+\begin{equation}
+|h| = 2*\left[ \log_{2}N \right] -1 + 2 * \left [ \log_{2}A + C \right] -1+ 2 * \left [ \log_{2}n + BD \right] -1 \\
+\end{equation}
+Where A is the number of Attributes, C is the number of classes and n is the unkown Sample size, N is the number of nodes, and BD is the branching degree. For both trees the number of attributes is 16 and 3 for the number of classes\\
+Now we find the cost function for decision Tree A, where Nodes = 5, and a BD = 2\\
+\begin{equation}\tag{a}\label{eq:a}
+\begin{split}
+|h| &= 2*\left[ \log_{2}5 \right] -1 + 2 * \left [ \log_{2}16 + 3 \right] -1+ 2 * \left [ \log_{2}n + 2 \right] -1 \\
+|h| &= 2 * 3 - 1 + 2 *5-1 + 2 * \left [ \log_{2}n + 2 \right] -1 \\
+|h| &= 6-1 + 10-1 + 2 * \left [ \log_{2}n + 2 \right] -1 \\
+|h|  &= 13 + 2 * \left [ \log_{2}n + 2 \right]\\
+\end{split}
+\end{equation}
+Now we find the cost function for decision Tree b, where N = 9,BD = 3.
+\begin{equation}\tag{b}\label{eq:b}
+\begin{split}
+|h| &= 2*\left[ \log_{2}9 \right] -1 + 2 * \left [ \log_{2}16 + 3 \right] -1+ 2 * \left [ \log_{2}n + 3 \right] -1 \\
+|h| &= 2 * 4 - 1 + 2 *5-1 + 2 * \left [ \log_{2}n + 3 \right] -1 \\
+|h| &= 8-1 + 10-1 + 2 * \left [ \log_{2}n + 3 \right] -1 \\
+|h|  &= 15 + 2 * \left [ \log_{2}n + 3 \right]\\
+\end{split}
+\end{equation}
+Using the MDL paradigm we need to find a $L_S(h) + \sqrt{\frac{\log_{ 2}{\left( \frac{2}{\delta} \right) } + \vert h \vert }{2 n}}$. The better decision tree is the one that gives us the lowest value. m is found as the sample size which is 200, $\delta$ is given as .99. and the $L_S(h)$ is the error devided by the sample size of the Decision tree. $|h|$ is the encoding length in which we solved above.\\
+For Decision tree A we get
+\begin{equation}\tag{a}\label{eq:c}
+\begin{split}
+|h|  &= 13 + 2 * \left [ \log_{2}200 + 3 \right]\\
+|h|  &= 13 + 2 * 8\\
+|h|  &= 29\\
+L_S(h) &= \frac{7}{200}\\
+\delta &= 0.99\\
+&=\frac{7}{200} + \sqrt{\frac{\log_{2}{\left( \frac{2}{.99} \right) } + 29 }{2 *200}}\\
+&=\frac{7}{200} + \sqrt{\frac{1.01449 + 29 }{2 *200}}\\
+&=0.293927\\
+\end{split}
+\end{equation}
+For Decision tree B we get
+\begin{equation}\tag{b}\label{eq:d}
+\begin{split}
+|h|  &= 15 + 2 * \left [ \log_{2}200 + 3 \right]\\
+|h|  &= 15 + 2 * 8\\
+|h|  &= 31\\
+L_S(h) &= \frac{4}{200}\\
+\delta &= 0.99\\
+&=\frac{4}{200} + \sqrt{\frac{\log_{2}{\left( \frac{2}{.99} \right) } + 31 }{2 *200}}\\
+&=\frac{4}{200} + \sqrt{\frac{1.01449 + 31 }{2 *200}}\\
+&=0.3029067\\
+\end{split}
+\end{equation}
+From the results we can conclude that Decision Tree A is the best one of the two.
 \end{document}
