@@ -9,7 +9,7 @@ def wieghts(w, a, y, n, first):
     r = n * y * a
     if first:
         w = w + r
-        return [w,True]
+        return [w, True]
     if np.sign(y) == np.sign(val):
         return [w, True]
     w = w + r
@@ -20,24 +20,24 @@ def wieghts_creation(name):
     m = np.loadtxt(name, dtype=None, delimiter=",")
     first = True
     all_safe = True
-    mxm = m.shape()
     ar = []
-    for x in range(mxm[1] - 1):
+    size = len(m[0])
+    for x in range(size - 1):
         ar.append(0)
     w = np.asarray(ar)
     n = 1
     while True:
         for data in m:
             vec = []
-            for num in range(mxm[1] - 1):
-                vec.append(data[x])
+            for num in range(size - 1):
+                vec.append(data[num])
             a = np.asarray(vec)
-            y = data[mxm[1]-1]
-            dict = wieghts(w, a, y, n, first)
-            w = dict[0]
+            y = data[size - 1]
+            ans = wieghts(w, a, y, n, first)
+            w = ans[0]
             print(w)
             print('----')
-            if dict[1] == False:
+            if ans[1] == False:
                 all_safe = False
             first = False
         if all_safe:
