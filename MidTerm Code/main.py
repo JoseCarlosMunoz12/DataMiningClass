@@ -66,7 +66,7 @@ def lda(name):
         else:
             x2.append(rs)
     # start LDA
-    
+
     print(size)
 
 
