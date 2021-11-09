@@ -47,4 +47,4 @@ def wieghts_creation(name):
 
 
 if __name__ == '__main__':
-    wieghts_creation('Data.csv')
+    wieghts_creation('data.csv')
