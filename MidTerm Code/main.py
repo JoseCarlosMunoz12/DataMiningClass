@@ -2,29 +2,41 @@ import math
 import numpy as np
 
 
-def z_func(pa, pb, n):
-    diff = pa - pb
-    p = (pa + pb) / 2.0
-    dev = math.sqrt((2 * p * (1 - p)) / n)
-    return diff / dev
+def wieghts(w, a, y, n, first):
+    val = w.dot(a)
+    print(a)
+    print(val)
+    r = n * y * a
+    if first:
+        w = w + r
+    if np.sign(y) == np.sign(val) or first:
+        return [w, True]
+    w = w + r
+    return [w, False]
 
 
-def center_data(name):
+def wieghts_creation(name):
     m = np.loadtxt(name, dtype=None, delimiter=",")
-    units = [[1, 1], [1, 2], [1, 3], [2, 1], [2, 2], [2, 3], [3, 1], [3, 2], [1, 3]]
-    for items in units:
-        ans = [0, 0, 0]
-        for val in m:
-            z = z_func(val[items[0]], val[items[1]], val[0])
-            print(z)
-            if z > 1.96:
-                ans[0] += 1
-            elif z < -1.96
-                ans[1] += 1
-            else:
-                ans[1] += 1
-        print(ans)
+    first = True
+    all_safe = True
+    w = np.array([0, 0, 0])
+    while True:
+        for data in m:
+            a = np.array([data[0], data[1], data[2]])
+            y = data[3]
+            dict = wieghts(w, a, y, 1, first)
+            w = dict[0]
+            print(w)
+            print('----')
+            if dict[1] == False:
+                all_safe = False
+            first = False
+        if all_safe:
+            break
+        else:
+            all_safe = True
+            first = False
 
 
 if __name__ == '__main__':
-    center_data('Data.txt')
+    wieghts_creation('Data.csv')
