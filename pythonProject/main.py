@@ -26,6 +26,7 @@ def weights_creation(name):
     size = len(m[0])
     for x in range(size - 1):
         ar.append(0)
+    ar.append(1)
     w = np.asarray(ar)
     n = 1
     while True:
@@ -33,6 +34,7 @@ def weights_creation(name):
             vec = []
             for num in range(size - 1):
                 vec.append(data[num])
+            vec.append(1)
             a = np.asarray(vec)
             y = data[size - 1]
             ans = weights(w, a, y, n, first)
