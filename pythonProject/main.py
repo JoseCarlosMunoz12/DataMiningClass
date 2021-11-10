@@ -68,6 +68,13 @@ def scatter_mat(mat):
     mat_t = mat.transpose()
     tt =  np.matmul(mat_t,mat)
     return tt
+
+def get_sb(mu1,mu2):
+    sub = np.matrix(mu1 - mu2)
+    subt = sub.transpose()
+    tt = np.matmul(subt,sub)
+    return tt
+
 def lda(name):
     m = np.loadtxt(name, dtype=None, delimiter=',')
     x1parse = []
@@ -96,8 +103,23 @@ def lda(name):
     # step 4) get scatter matrix
     sc0 = scatter_mat(x1c)
     sc1 = scatter_mat(x2c)
-    # step 5 get Sw
+    # step 5) get Sw
+    sw = sc0 + sc1
+    # step 6) get SB
+    sb = get_sb(mu1,mu2)
+    # step 7) get Matrix
+    inv = np.linalg.inv(sw)
+    mat = np.matmul(inv,sb)
+    # step 8) get eigen values
+    u,v = np.linalg.eig(mat)
+    w = v[:,1]
+    # step 9) calculate seperator
+    mu0w = np.dot(w,mu1)
+    mu1w = np.dot(w,mu2)
+    seperator = ( mu0w + mu1w) /2
+    return [w,seperator]
+
 
 if __name__ == '__main__':
     #weights_creation('data.csv')
-    lda('data.csv')
+    ans = lda('data.csv')
