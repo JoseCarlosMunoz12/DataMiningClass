@@ -71,5 +71,5 @@ def lda(name):
 
 
 if __name__ == '__main__':
-    weights_creation('data.csv')
-    # lda('data.csv')
+    # weights_creation('data.csv')
+    lda('data.csv')
