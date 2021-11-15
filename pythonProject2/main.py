@@ -179,6 +179,15 @@ def weights_majority(rows, neighbor):
     else:
         print ('is class 2')
 
+def distance(vec0,vec1):
+    diff = vec1 - vec0
+    x = np.matrix(diff)
+    y = np.matrix(diff)
+    y = y.transpose()
+    dis = np.matmul(x,y)
+    dis = sqrt(dis)
+    return dis
+
 
 def knn(name, main_value):
     m = np.loadtxt(name, dtype=None, delimiter=",")
