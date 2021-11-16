@@ -1,4 +1,68 @@
 11//16/2021
 Support Vecor Recap
 seperating with a hyperplane, some will always mislcassified, have a margin in which it can be use to
+A margin is the minium distance from the seperating hyperplane
+want to solve minimization of the d*
+w *x + b = 0 is a plane equation
+d =  x projection onto w hyperplane times y
+if we normalize, then
+d* = above time S
+asume that multpling will make it all to one
+so
+y_i(wx_i + b)>= 1
+d* * ||w|| = 1
+min d* = 1/ ||w||
+want minimuze distance of the margin of the hyperplane so
+it becomes min d* = 2/||w||
+rest is solving the system of inqualities
+its an optimization problem
+/////
+look into how the kernel are constructed
+/////
+gamma is the actual geometric distance achieved
+///
+What is the cost of SVM
+cost beauseof Soft margin of the SVM
+recall, y(w*x+b) + e >=1 where e is the error
+need to minimize the error and minimize the cost as well
+///
+If there is a minimum margin, there is a chance of points being in the margin or on the other side. that is the cost
+///
+train model with best parametsr found from tuning the training data set
+seen trees, random tress, linear classifier, percetron Fishers LDA and SVM
+All linear classifiers
+///
+we were optimizing exirimental risk and was supervizing data.
+New situation, no training  set, data just comes in.
+Unkown how many classes there is
+Cluster analysis
+//
+Introduction of Clustering Amalysis
+what is it?
+finding groups of objects such that obj in a group could be similar to another one. diffrom from obj of other groups
+intra cluster dis are minimized
+inter cluster dis are maximized
+//
+similar if S =1 and dissimilar if S = 0
+neet partition set into an uknown number of groups
+measure of dis is minkowksi dis, euclidean and manhattan
+cosine similarity is a dot produt of instance x and y devided by product of their magnitude
+Data set has boolean features
+use hamming distance or jaccard similarity
+///
+Cluser Analysis as learning
+can also use probability to dtermine cluster/
+///
+But how can a Computer see a cluster?
+might be spot, but can be arbitraty
+Must choose a minimization to find
+////
+Types of clustering
+///
+2 main Model, Partitional and hierarchical
+Partitional Clustering
+Group items that are closest to each other
+Hierarchical Clustering
+Points belong to a subset that belong another bigger subest, etc etc
+two sub types traditional  and Non traditional
 
