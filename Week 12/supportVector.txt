@@ -1,0 +1,4 @@
+11//16/2021
+Support Vecor Recap
+seperating with a hyperplane, some will always mislcassified, have a margin in which it can be use to
+
