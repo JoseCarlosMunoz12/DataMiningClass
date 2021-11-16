@@ -188,23 +188,36 @@ def distance(vec0,vec1):
     dis = sqrt(dis)
     return dis
 
+def dis_id_array(vecs,main_value):
+    c1_count = 1
+    c2_count = 1
+    results = []
+    for vec in vecs:
+        dis = distance(vec[0],main_value)
+        count = 0
+        if(vec[1] == 1)
+            count = c1_count
+            c1_count +=1
+        else
+            count = c2_count
+            c2_count += 1
+        string_id = "C{vec[1]}:{count}"
+        results.append([dis,string_id])    
+    return sorted(results, key = lambda x: x[0])
 
 def knn(name, main_value):
     m = np.loadtxt(name, dtype=None, delimiter=",")
-    diffs = []
-    count = 0
+    vecs = []
+    size = len(m[0])
     for row in m:
-        var = abs(row[0] - main_value)
-        diffs.append([var, count])
-        count += 1
-    diffs.sort(key=lambda y: y[0])
-    sorted = []
-    for row in diffs:
-        sorted.append([row[0], m[row[1]][1]])
-    neighbors = [1, 3, 5, 9]
-    for neighs in neighbors:
-        majority(sorted, neighs)
-        weights_majority(sorted, neighs)
+        vecs.append([row[0:size-1],row[size-1]])
+    ls = dis_id_array(vecs,main_value)
+    neighboors = [1,3,5,9]
+    for neighs in neighboors:
+        arr = ls[0: nieghs]
+        majority(arr,
+    
+    
 
 
 if __name__ == '__main__':
