@@ -149,11 +149,11 @@ def lda(name):
 # Neighbor algorithms
 
 
-def majority(rows, neighbor):
+def majority(rows):
     x0 = 0
     x1 = 0
-    for x in range(neighbor):
-        if rows[x][1] == 1:
+    for vec in rows:
+        if vec[1] == 1:
             x1 += 1
         else:
             x0 += 1
@@ -163,14 +163,14 @@ def majority(rows, neighbor):
         print ('is class 2')
 
 
-def weights_majority(rows, neighbor):
+def weights_majority(rows):
     x0 = 0
     x1 = 0
-    for x in range(neighbor):
-        val = rows[x][0]
+    for vec in rows:
+        val = vec[0]
         val = val * val
         val = 1 / val
-        if rows[x][1] == 1:
+        if vec[1] == 1:
             x1 += val
         else:
             x0 += val
@@ -202,7 +202,7 @@ def dis_id_array(vecs,main_value):
             count = c2_count
             c2_count += 1
         string_id = "C{vec[1]}:{count}"
-        results.append([dis,string_id])    
+        results.append([dis,vec[1],string_id})    
     return sorted(results, key = lambda x: x[0])
 
 def knn(name, main_value):
@@ -215,11 +215,10 @@ def knn(name, main_value):
     neighboors = [1,3,5,9]
     for neighs in neighboors:
         arr = ls[0: nieghs]
-        majority(arr,
-    
-    
+        majority(arr)
+        weights_majorit(arr)
 
-
+                        
 if __name__ == '__main__':
     weights_creation('data.csv')
     ans = lda('LDA.csv')
