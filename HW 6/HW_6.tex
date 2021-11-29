@@ -32,136 +32,17 @@
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=1in}
 \begin{center}
     \Large
-    \textbf{Homework 5 G}\\
+    \textbf{Homework 6}\\
     \small
     \today\\
     \large
     Jose Carlos Munoz
 \end{center}%===============================
+Q1\\
+Q2\par
+1)\par
+There is no real maximum amount of points. But there needs to be an amount of points that are not in the Data set. So the maximum would be the size of the dimension of R\par
 \par
-12.a)\\
-\par
-1-nearest for 5.0 are $4.9 \vert +$
-\begin{equation*}
-\begin{array}{c|cc}
-              & + & - \\
-\hline          
-\mbox{Amount} & 1 & 0 \\
-\end{array}
-\end{equation*}
-The maximum amount is for +. So it is classified as a +\\
-3-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$
-\begin{equation*}
-\begin{array}{c|cc}
-              & + & - \\
-\hline          
-\mbox{Amount} & 1 & 2 \\
-\end{array}
-\end{equation*}
-The maximum amount is for -. So it is classified as a -\\
-5-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$
-\begin{equation*}
-\begin{array}{c|cc}
-              & + & - \\
-\hline          
-\mbox{Amount} & 3 & 2 \\
-\end{array}
-\end{equation*}
-The maximum amount is for +. So it is classified as a +\\
-9-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$,$4.5 \vert +$, $3.0 \vert -$, $7.0 \vert -$,$0.5 \vert -$
-\begin{equation*}
-\begin{array}{c|cc}
-              & + & - \\
-\hline          
-\mbox{Amount} & 4 & 5 \\
-\end{array}
-\end{equation*}
-The maximum amount is for -. So it is classified as a -\\
-12.b)\\
-1-nearest for 5.0 are $4.9 \vert +$
-\begin{equation*}
-\begin{split}
-\Sigma_+ &= ( 5 -4.9 )^{-2}\\
-&= 100\\
-\Sigma_- &= 0
-\end{split}
-\end{equation*}
-The maximum value is for +. So it is classified as a +\\
-3-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$
-\begin{equation*}
-\begin{split}
-\Sigma_+ &= ( 5 - 4.9 )^{-2)}\\
-&= 100\\
-\Sigma_- &= ( 5 - 5.2 )^{-2} +( 5 - 5.3 )^{-2}\\
-&= 36.11\\
-\end{split}
-\end{equation*}
-The maximum amount is for +. So it is classified as a +\\
-5-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$
-\begin{equation*}
-\begin{split}
-\Sigma_+ &= ( 5 - 4.9 )^{-2} +( 5 - 5.5 )^{-2} +( 5 - 4.6 )^{-2}\\
-&= 110.25\\
-\Sigma_- &= ( 5 - 5.2 )^{-2} +( 5 - 5.3 )^{-2}\\
-&= 36.11\\
-\end{split}
-\end{equation*}
-The maximum amount is for +. So it is classified as a +\\
-9-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$,$4.5 \vert +$, $3.0 \vert -$, $7.0 \vert -$,$0.5 \vert -$
-\begin{equation*}
-\begin{split}
-\Sigma_+ &= ( 5 - 4.9 )^{-2} +( 5 - 5.5 )^{-2} +( 5 - 4.6 )^{-2}+( 5 - 4.5 )^{-2}\\
-&= 114.25\\
-\Sigma_- &= ( 5 - 5.2 )^{-2} +( 5 - 5.3 )^{-2}+( 5 - 3.0 )^{-2}+( 5 - 7.0 )^{-2}+( 5 - 0.5 )^{-2}\\
-&= 36.7\\
-\end{split}
-\end{equation*}
-The maximum amount is for +. So it is classified as a +
-\par
-13)\\
-We first make a table for the Home Owener and Marraige Attributes
-\begin{equation}\tag{Marraige Status}
-\begin{array}{c|ccc}
-\mbox{Class}& S & M & D \\
-\hline          
-\mbox{Yes}   & 2 & 0 & 1 \\
-\mbox{No}    & 2 & 4 & 1 \\
-\end{array}
-\end{equation}
-
-\begin{equation}\tag{Home Owner}
-\begin{array}{c|ccc}
-\mbox{Class}& Y & N  \\
-\hline          
-\mbox{Yes}   & 0 & 3 \\
-\mbox{No}    & 3 & 4 \\
-\end{array}
-\end{equation}
-we use this equation to find the distance from each of the values
-\begin{equation}
-D(V_1,V_2) = \Sigma \vert \frac{n_{i1}}{n_1} - \frac{n_{i2}}{n_2}\vert
-\end{equation}
-We First do the Marital Status Attribute
-\begin{equation*}
-\begin{split}
-d(\mbox{Single},\mbox{Married}) &= \vert\frac{2}{4} - \frac{0}{4}\vert + \vert\frac{2}{4} - \frac{4}{4}\vert\\
-&= \frac{1}{2} + \frac{1}{2}\\
-&= 1\\
-d(\mbox{Single},\mbox{Divorced}) &= \vert\frac{2}{4} - \frac{1}{2}\vert + \vert\frac{2}{4} - \frac{1}{2}\vert\\
-&= 0 + 0\\
-&= 1\\
-d(\mbox{Divorced},\mbox{Married}) &= \vert\frac{1}{2} - \frac{0}{4}\vert + \vert\frac{1}{2} - \frac{4}{4}\vert\\
-&= \frac{1}{2} + \frac{1}{2}\\
-&= 1\\
-\end{split}
-\end{equation*}
-Then we do for the Home Owner Attribute
-\begin{equation*}
-\begin{split}
-d(\mbox{Yes},\mbox{No}) &= \vert\frac{0}{3} - \frac{3}{7}\vert + \vert\frac{3}{3} - \frac{4}{7}\vert\\
-&= \frac{3}{7} + \frac{3}{7}\\
-&= \frac{6}{7}\\
-\end{split}
-\end{equation*}
-
+2)\par
+Regardless of the dimension and amount of data points,the minimum amount of support vectors is 2.
 \end{document}
