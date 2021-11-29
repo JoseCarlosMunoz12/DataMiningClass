@@ -1,0 +1,167 @@
+\documentclass[12pt,english]{article}
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=1in,right=1in,top=1in,bottom=1in,%
+            footskip=.25in]{geometry}
+\usepackage{blindtext}
+\usepackage{titling}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{lettrine} 
+\usepackage{tikz}  
+\usepackage{color} 
+\usepackage{verbatim}
+ \usetikzlibrary{shapes, arrows, calc, arrows.meta, fit, positioning} % these are the parameters passed to the library to create the node graphs  
+\tikzset{  
+    -Latex,auto,node distance =0.4 cm and 1.0 cm, thick,% node distance is the distance between one node to other, where 1.5cm is the length of the edge between the nodes  
+    state/.style ={ellipse, draw, minimum width = 0.3 cm}, % the minimum width is the width of the ellipse, which is the size of the shape of vertex in the node graph  
+    point/.style = {circle, draw, inner sep=0.18cm, fill, node contents={}},  
+    bidirected/.style={Latex-Latex,dashed}, % it is the edge having two directions  
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily},
+    el/.style = {inner sep=2.5pt, align=right, sloped},
+    arn_r/.style = {treenode, circle, red, draw=red},
+    arn_x/.style = {treenode, rectangle, draw=black},
+    minimum width=2.5em, minimum height=1.5em}% arbre rouge noir, nil
+\setlength{\parskip}{12pt}
+\title{Home Work 5 Graduate}
+\date{\today}
+\author{Jose Carlos Munoz}
+%================================
+\begin{document}
+\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=1in}
+\begin{center}
+    \Large
+    \textbf{Homework 5 G}\\
+    \small
+    \today\\
+    \large
+    Jose Carlos Munoz
+\end{center}%===============================
+\par
+12.a)\\
+\par
+1-nearest for 5.0 are $4.9 \vert +$
+\begin{equation*}
+\begin{array}{c|cc}
+              & + & - \\
+\hline          
+\mbox{Amount} & 1 & 0 \\
+\end{array}
+\end{equation*}
+The maximum amount is for +. So it is classified as a +\\
+3-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$
+\begin{equation*}
+\begin{array}{c|cc}
+              & + & - \\
+\hline          
+\mbox{Amount} & 1 & 2 \\
+\end{array}
+\end{equation*}
+The maximum amount is for -. So it is classified as a -\\
+5-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$
+\begin{equation*}
+\begin{array}{c|cc}
+              & + & - \\
+\hline          
+\mbox{Amount} & 3 & 2 \\
+\end{array}
+\end{equation*}
+The maximum amount is for +. So it is classified as a +\\
+9-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$,$4.5 \vert +$, $3.0 \vert -$, $7.0 \vert -$,$0.5 \vert -$
+\begin{equation*}
+\begin{array}{c|cc}
+              & + & - \\
+\hline          
+\mbox{Amount} & 4 & 5 \\
+\end{array}
+\end{equation*}
+The maximum amount is for -. So it is classified as a -\\
+12.b)\\
+1-nearest for 5.0 are $4.9 \vert +$
+\begin{equation*}
+\begin{split}
+\Sigma_+ &= ( 5 -4.9 )^{-2}\\
+&= 100\\
+\Sigma_- &= 0
+\end{split}
+\end{equation*}
+The maximum value is for +. So it is classified as a +\\
+3-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$
+\begin{equation*}
+\begin{split}
+\Sigma_+ &= ( 5 - 4.9 )^{-2)}\\
+&= 100\\
+\Sigma_- &= ( 5 - 5.2 )^{-2} +( 5 - 5.3 )^{-2}\\
+&= 36.11\\
+\end{split}
+\end{equation*}
+The maximum amount is for +. So it is classified as a +\\
+5-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$
+\begin{equation*}
+\begin{split}
+\Sigma_+ &= ( 5 - 4.9 )^{-2} +( 5 - 5.5 )^{-2} +( 5 - 4.6 )^{-2}\\
+&= 110.25\\
+\Sigma_- &= ( 5 - 5.2 )^{-2} +( 5 - 5.3 )^{-2}\\
+&= 36.11\\
+\end{split}
+\end{equation*}
+The maximum amount is for +. So it is classified as a +\\
+9-nearest for 5.0 are $4.9 \vert +$, $5.2 \vert -$, $5.3 \vert -$,$5.5 \vert +$, $4.6 \vert +$,$4.5 \vert +$, $3.0 \vert -$, $7.0 \vert -$,$0.5 \vert -$
+\begin{equation*}
+\begin{split}
+\Sigma_+ &= ( 5 - 4.9 )^{-2} +( 5 - 5.5 )^{-2} +( 5 - 4.6 )^{-2}+( 5 - 4.5 )^{-2}\\
+&= 114.25\\
+\Sigma_- &= ( 5 - 5.2 )^{-2} +( 5 - 5.3 )^{-2}+( 5 - 3.0 )^{-2}+( 5 - 7.0 )^{-2}+( 5 - 0.5 )^{-2}\\
+&= 36.7\\
+\end{split}
+\end{equation*}
+The maximum amount is for +. So it is classified as a +
+\par
+13)\\
+We first make a table for the Home Owener and Marraige Attributes
+\begin{equation}\tag{Marraige Status}
+\begin{array}{c|ccc}
+\mbox{Class}& S & M & D \\
+\hline          
+\mbox{Yes}   & 2 & 0 & 1 \\
+\mbox{No}    & 2 & 4 & 1 \\
+\end{array}
+\end{equation}
+
+\begin{equation}\tag{Home Owner}
+\begin{array}{c|ccc}
+\mbox{Class}& Y & N  \\
+\hline          
+\mbox{Yes}   & 0 & 3 \\
+\mbox{No}    & 3 & 4 \\
+\end{array}
+\end{equation}
+we use this equation to find the distance from each of the values
+\begin{equation}
+D(V_1,V_2) = \Sigma \vert \frac{n_{i1}}{n_1} - \frac{n_{i2}}{n_2}\vert
+\end{equation}
+We First do the Marital Status Attribute
+\begin{equation*}
+\begin{split}
+d(\mbox{Single},\mbox{Married}) &= \vert\frac{2}{4} - \frac{0}{4}\vert + \vert\frac{2}{4} - \frac{4}{4}\vert\\
+&= \frac{1}{2} + \frac{1}{2}\\
+&= 1\\
+d(\mbox{Single},\mbox{Divorced}) &= \vert\frac{2}{4} - \frac{1}{2}\vert + \vert\frac{2}{4} - \frac{1}{2}\vert\\
+&= 0 + 0\\
+&= 1\\
+d(\mbox{Divorced},\mbox{Married}) &= \vert\frac{1}{2} - \frac{0}{4}\vert + \vert\frac{1}{2} - \frac{4}{4}\vert\\
+&= \frac{1}{2} + \frac{1}{2}\\
+&= 1\\
+\end{split}
+\end{equation*}
+Then we do for the Home Owner Attribute
+\begin{equation*}
+\begin{split}
+d(\mbox{Yes},\mbox{No}) &= \vert\frac{0}{3} - \frac{3}{7}\vert + \vert\frac{3}{3} - \frac{4}{7}\vert\\
+&= \frac{3}{7} + \frac{3}{7}\\
+&= \frac{6}{7}\\
+\end{split}
+\end{equation*}
+
+\end{document}
