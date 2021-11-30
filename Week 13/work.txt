@@ -1,1 +1,62 @@
 11/30/2012
+week 13
+Klustering Data points
+Means points
+a set {} of means that get the nearsest neighboors
+then, get new medians to get better  results. 
+Continue until the the sets doesn't change
+from 2 weeks ago
+//K means
+Recap
+have K centroid, normaly chosen at randomm
+then matrix of distance, group those that are closest to each K centroid.
+repeat until, there is no change in the centroid
+//
+we do this becuase no real classes to classify each point kluster
+//
+might take k in power of points to find the change.
+algoorithm depends on the distance, Can use differnt methods to  meacure proximity
+manhattan distance, euclidean, cosine similarity, mahalanobis distance,
+all of these are the mean, except for the manhattan distance, its the median distance
+//
+learn what mahalanobis idstnace is
+//
+Solutions to the initial centroid problems.
+what are the centroid to use?, might be too far to move. or over all distance might not change the centroid
+//
+if cluseter are relativly tight, it migh never change the centroid of the empty cluster.
+empty Cluster problem
+//
+Another problem, the division might  devide clearly seeable cluster. Splits it into a wrong way.
+All depends on the initial choice
+//
+what can we do?
+min/max, minisize distancce in cluster, but maximize distance from each cluster
+//
+we can run many times, but probability is not in our side. k!/2^n possibilities
+//
+hierachical clustering to determine initial centroids. Might not be good for large data sets
+//
+Select more than K initial centroids, make more clusters. Select the best cluster. Merge some clusters
+//
+Bisecting  k-means
+//
+Modification
+Handling Empty Clusters
+Choosing K centroid might produce empty clusters. what can we do?
+for these use medoids from the points to create a new centroid
+-Use a point that contribues the most to the SSE. Continue k-means.
+-Choose  apoints from the cluster wiwth the highest SSE. Then choose the highest SSE from that cluster
+All of these are hueristic. None work in the worst case scenerio.
+on average, it works well enough.
+//
+Pre-Processing
+-normalize the daa
+-eliminate outliers
+Post-Processing
+-Remove small clusters
+-Split loose cluster, those with high SSE.Signal that the cluster is actually two
+-merge cluster that are close and low SSE, depends on knowledge of the subject anner
+-Can use these steps during the clustering process
+//
+
