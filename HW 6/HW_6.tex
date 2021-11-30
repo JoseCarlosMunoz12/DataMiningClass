@@ -29,17 +29,17 @@ Q1\\
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
-\begin{axis}
+\begin{axis}[
     width=0.5\linewidth,
     height=5cm,
     axis lines=left,
     grid=both,
-    xtick={0,1,...,10},
-    ytick={0,1,...,8},
+    xtick={0,1,...,8},
+    ytick={0,1,...,5},
     xmin=0,
-    xmax=10,
+    xmax=8,
     ymin=0,
-    ymax=8
+    ymax=5
     ]
 \addplot[red,dashed,domain=0:3]{-1/2 *x +3/2)};
 \addplot[blue,domain=0:5]{-1/2 *x +5/2)};
@@ -49,8 +49,8 @@ Q1\\
 \end{axis} 
 \end{tikzpicture}
 \caption{Support Vector with Margin} \label{fig:M1}
-\end{figure}\\
-
+\end{figure}\par
+test\\
 Q2\par
 1)\par
 There is no real maximum amount of points. But there needs to be an amount of points that are not in the Data set. So the maximum would be the size of the dimension of R\par
