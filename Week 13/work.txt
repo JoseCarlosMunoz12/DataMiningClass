@@ -71,4 +71,19 @@ Keep doing this until we have an acccaptble Clusuter distance.
 Splits data into many cluster than needed. Will need to merge some meaning less clusters	
 k-Means have a problem in size of clusters and shape of the clusters
 In R the cluster class that has bisecting -mean uses dclust library. All it does is divisional bisecting clustering
-
+Unsuperpise learning doesn't give you a guarantee splitting into a local max/min
+//
+Hierarchical Clustering
+like bisecting k-means, but more choices for clustering
+//
+Not flexible, because it builds bottom up not top down.
+They may correspond tomeaningful taxonomies. Ex paleotnolgical classification
+two types of it.
+Agglomerative and devisive
+1)Agglomerative Clustering
+-easy to implement.
+algorithm
+-Compute proximity matrix
+-i) merge the two closst cluster
+-ii) update the proximity maxtrix
+-repeat until only a single cluster remains
