@@ -11,22 +11,9 @@
 \usepackage{tikz}  
 \usepackage{color} 
 \usepackage{verbatim}
- \usetikzlibrary{shapes, arrows, calc, arrows.meta, fit, positioning} % these are the parameters passed to the library to create the node graphs  
-\tikzset{  
-    -Latex,auto,node distance =0.4 cm and 1.0 cm, thick,% node distance is the distance between one node to other, where 1.5cm is the length of the edge between the nodes  
-    state/.style ={ellipse, draw, minimum width = 0.3 cm}, % the minimum width is the width of the ellipse, which is the size of the shape of vertex in the node graph  
-    point/.style = {circle, draw, inner sep=0.18cm, fill, node contents={}},  
-    bidirected/.style={Latex-Latex,dashed}, % it is the edge having two directions  
-  treenode/.style = {align=center, inner sep=0pt, text centered,
-    font=\sffamily},
-    el/.style = {inner sep=2.5pt, align=right, sloped},
-    arn_r/.style = {treenode, circle, red, draw=red},
-    arn_x/.style = {treenode, rectangle, draw=black},
-    minimum width=2.5em, minimum height=1.5em}% arbre rouge noir, nil
-\setlength{\parskip}{12pt}
-\title{Home Work 5 Graduate}
-\date{\today}
-\author{Jose Carlos Munoz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{external}
+\pgfplotsset{width=10cm,compat=1.9}
 %================================
 \begin{document}
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=1in}
@@ -39,6 +26,32 @@
     Jose Carlos Munoz
 \end{center}%===============================
 Q1\\
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}colorbar sampled,
+    colorbar style={samples=13},
+    grid=both,
+    scale only axis=true,
+    width=10cm,
+    height=15cm,
+    xtick={0,1,...,10},
+    ytick={0,1,...,8},
+    xmin=0,
+    xmax=10,
+    ymin=0,
+    ymax=8
+    ]
+\addplot[red,dashed,domain=0:3]{-1/2 *x +3/2)};
+\addplot[blue,domain=0:5]{-1/2 *x +5/2)};
+\addplot[red,dashed,domain=0:7]{-1/2 *x +7/2)};
+\addplot[black,only marks] table [x=a, y=b, col sep=comma] {datas.csv};
+\addplot[black,only marks, mark=o] table [x=a, y=b, col sep=comma] {dataes.csv};
+\end{axis} 
+\end{tikzpicture}
+\caption{Support Vector with Margin} \label{fig:M1}
+\end{figure}\\
+
 Q2\par
 1)\par
 There is no real maximum amount of points. But there needs to be an amount of points that are not in the Data set. So the maximum would be the size of the dimension of R\par
