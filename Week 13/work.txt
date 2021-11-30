@@ -59,4 +59,16 @@ Post-Processing
 -merge cluster that are close and low SSE, depends on knowledge of the subject anner
 -Can use these steps during the clustering process
 //
+Clusters in R
+library is cluster
+//
+Bisecting K-means
+Variatnt of K-menas that can produce a partitional or  ahierachical clustering
+randamly generate 2  cluster with the lowset SSE to the list of cluster
+Bisect cluster with the hieghst SSE and split it.
+Keep doing this until we have an acccaptble Clusuter distance.
+//
+Splits data into many cluster than needed. Will need to merge some meaning less clusters	
+k-Means have a problem in size of clusters and shape of the clusters
+In R the cluster class that has bisecting -mean uses dclust library. All it does is divisional bisecting clustering
 
