@@ -1,0 +1,12 @@
+require(e1071)
+m0_data<-read.csv(file = "data.csv",header = TRUE)
+m0_data$Class <- as.factor(m0_data$Class)
+svm_model<-svm(Class ~ ., data = m0_data,kernel = "linear")
+table(predict(svm_model),m0_data$Class,dnn = c("Prediction","Actual"))
+plot(svm_model,m0_data)
+
+m1_data<-read.csv(file = "data1.csv",header = TRUE)
+m1_data$Class <- as.factor(m1_data$Class)
+svm_model1<-svm(Class ~ ., data = m1_data,kernel = "linear")
+table(predict(svm_model1),m1_data$Class,dnn = c("Prediction","Actual"))
+plot(svm_model1,m1_data)
