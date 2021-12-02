@@ -31,3 +31,30 @@ one is Min,
 proximity of group average of the points distance from each pnt in the cluster
 \\
 recalculate distance of the points
+average Strength adn lmitation
+Compromise bt single and complete link
+Strengths:
+Less suseptible to noise and noise than min
+doesn't break large as much as MAX
+limitations:
+still biased towards globular clusters
+//
+R Programing
+hierarchia clusering. R
+hclust() is  for agglomerativeclutering.
+rect.hclust() used the memory of the plot.
+cutree(cl_sin_s,3) extract 3 level classification
+3 methods single, complete, ave
+single is MIN
+complete is the MAX
+ave is for group average
+ward.D2 is what?
+//
+Density Clusters(maybe next week)
+DBSCAN algorithm
+as density based algorithm
+Density = Number of pnts wthn a specified R (eps)
+core pnt pnt with the eps
+border pnt has fewer than Minpnt with eps is in the neighborhood of a core point
+noise point any point not in the core point or noise point
+
