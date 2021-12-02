@@ -1,3 +1,15 @@
 12/2/21
 Hierarchical Clustering
+recap from last week:
+2 types of hierachical Clustering. join  two clostes cluster accoridng the proximity matrix.
+keep doing until only 1 cluster remains
+how to define inter-cluser similairty?
+4 different distances, 
+min, max, Group average, Distanec btw Centroids. other methods drice y an objective functipn.
+Dis bt Centroid is not geometrice, but based on the distributions
+MAXX(Completed DIstance)
+max distance of the cluster points
+Computing the minimum of the max distance, of the cluster form. then from these merge these clusters
+not max, but a min max
+//
 
