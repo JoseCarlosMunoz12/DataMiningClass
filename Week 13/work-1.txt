@@ -71,3 +71,6 @@ can handle cluster of different shapes and iszes
 draw back
 Varying densities
 high dimensional data
+DSCAN in R
+fpc library has the dbscan algorithm
+
