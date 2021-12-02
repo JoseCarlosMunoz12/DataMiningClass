@@ -57,4 +57,17 @@ Density = Number of pnts wthn a specified R (eps)
 core pnt pnt with the eps
 border pnt has fewer than Minpnt with eps is in the neighborhood of a core point
 noise point any point not in the core point or noise point
-
+fixed 2 points.
+a center point and a threshold size
+Cluster are not define yet. Just defining how many points.
+Google about DBSCAN based algorithm.
+if distance around it is not 10, then not a core point but a border point.
+//
+Minpnts size we define size of a core point.
+Algorithm is to remove any noise point and merge points until a cluster
+benefits
+resitant to noise
+can handle cluster of different shapes and iszes
+draw back
+Varying densities
+high dimensional data
