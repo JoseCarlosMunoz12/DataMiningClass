@@ -12,4 +12,22 @@ max distance of the cluster points
 Computing the minimum of the max distance, of the cluster form. then from these merge these clusters
 not max, but a min max
 //
+If it is about proximity, then its the max of min distance from each cluster
+minmax/maxmin always merge afterwars and recalculate it
+//
+join two closest cluster, not much differnce. Compute distance of the cluster as the maximim distance.
+distance of this new cluster is the minimum possible distancce.
 
+Strength of MAX:
+less susceptible to noise and outliers than MIN
+limitations:
+tends to break clusters
+biased towards global clusters
+Group Average:
+proximity of two clusters is the aveate of pairwaise proximity bte points in two clusters.
+kinda like SSE
+all of these are the same distances. 2 ideas bte dis bte sets.
+one is Min,
+proximity of group average of the points distance from each pnt in the cluster
+\\
+recalculate distance of the points
