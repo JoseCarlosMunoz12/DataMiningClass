@@ -62,3 +62,7 @@ Diana metric is "eucledian" and stand = TRUE
 Clustering Assuming Generative Model
 //
 How it works.
+There are K clusters, there are some distribution for each Cluster.
+so P_di(Z|Y):
+the challange is that Di, w should assume that the distribution is normal. Need to get Hypothesis of the point and the parameter of the, with out any training set.\\
+similar to Naive biayessian, but we have no traiing set.
