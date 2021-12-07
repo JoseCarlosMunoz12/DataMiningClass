@@ -1,0 +1,41 @@
+12/7/21
+Dendrogram Computation
+Ceontroid Distance
+Compute the ceontroid of the cluster. then find the distance of each centroid to each other
+//
+dist(Ci,Cj) = dist(ci,cj)
+//
+Problematic property ; non-monotonic:
+the proxity of the current step could be bigger than the proxity of either.
+The new centroid distance, by hierachical tree, needs to bigger than the similairty of the new cluster. Non-monotonic
+//
+a differnt order because there is a shorter distance. distance of centroid is not usually use or reliable enough
+//
+new center will be the mean of the new cluster for Centroid Dendrogram
+//
+need to recompute all the distances. new Distance matrix
+//
+Centroid Dendogram is a bigger computational task
+//
+new stuff, not in Exam still fun
+Alternatice Clustering methods
+--Ward Measure--
+Similarty of two cluster based on the increase in suqared error when two clusters are merged
+- simialr to group average if distance bte are squared
+It analyzes the variance of clusters of clusters. most suitable method for quantitative variables.
+Joine cluster that have the smalles jump in SSE. Effective and most logical metric based clustering.
+//
+Benefits, Less susceptible to noise and outliers
+Drawback, biased towards globular clusters.Similar problem with Centroid, the mergeing and jump might be more optimal in another paor
+//
+Its non monotonic, even though its logical way to do it.
+//
+Ward is extensivbly used
+//
+Basic use of hierarchial, to finding true num of clusters. Phylogenetic trees us hierarchical clusters. Much smoother than centroid. Ward tells more about information
+//
+if occurs, have to look at reason as to why it occurs. needs to be look substancly
+//
+Math is imprtant when eucleadian distance is needed. translate them int some other measurement or higher or same dimensional space
+//
+
