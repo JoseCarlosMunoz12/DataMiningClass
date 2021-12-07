@@ -65,4 +65,14 @@ How it works.
 There are K clusters, there are some distribution for each Cluster.
 so P_di(Z|Y):
 the challange is that Di, w should assume that the distribution is normal. Need to get Hypothesis of the point and the parameter of the, with out any training set.\\
-similar to Naive biayessian, but we have no traiing set.
+similar to Naive biayessian, but we have no traiing set
+Hypothesis is prior as the same time as to estimate the parameters. Only way is to classification problem but with missing data.
+//
+Missing Data Problem:
+let Theta_Vec be a vector of parametsr of our models. but how to get Hypothesis and parameters.
+if we know H we can find parameters, if we have parametsr, we can assing a label A.
+Alternateive between 2 steps.
+step 1) assign parametsrs and estimate labels, Fix missing labels and find new parametes
+continue until converges.
+//
+
