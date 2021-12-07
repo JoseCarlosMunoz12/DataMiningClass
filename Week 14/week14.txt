@@ -38,4 +38,20 @@ if occurs, have to look at reason as to why it occurs. needs to be look substanc
 //
 Math is imprtant when eucleadian distance is needed. translate them int some other measurement or higher or same dimensional space
 //
-
+Agglomerative Clustering: Time and Space
+//
+already shown to us.
+AGNES a straightfoward agglomerative Clustering
+O(n^2) space since ituses the prximity matirx. can be reduce a bit
+//
+Dvisive Clustering
+Sparcified nearest Neighbor Graph
+//
+Compe limted distance graph, K nearinsh neighbor, not a symetric neighboor. A could have a closest neighbor of B, but B might have an even closer neighbor of C
+//
+Remove hieghest degree edges. Limit amount of neighbors in the graph
+//
+Divisive hierarchical Clustering
+//
+ust MST for constructing hierarchy of Clusters
+-
