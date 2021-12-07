@@ -54,4 +54,11 @@ Remove hieghest degree edges. Limit amount of neighbors in the graph
 Divisive hierarchical Clustering
 //
 ust MST for constructing hierarchy of Clusters
--
+-its a minimum algorith, works differently and its an approximation of it.
+DIANA algorithm
+in R, DIANA is in cluster library
+Diana metric is "eucledian" and stand = TRUE
+//
+Clustering Assuming Generative Model
+//
+How it works.
