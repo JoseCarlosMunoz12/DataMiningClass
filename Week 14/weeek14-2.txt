@@ -21,5 +21,27 @@ Compute Cophenetic Distance Table, Cophenetic Correlation
 //Q1
 Naive Bayes
 Niave Bayes of it a column could just be a table. of feature x feature amount for class.Normal Distribution for the continous data set
-
-
+SVM for 3 points, 2 class 1 and 1 and class 2. 
+All three points aer support vecors. Lets sau all 3 ar not linear dependent. IF 2 points are support vectors, then that means that any plane willl have teh same orthogonal vecors. Should go through the vector.
+2 Plausible vector. if they are , then the distance to equidistance has to be bigger than the support vector.If there there is onee that smaller then , there is more than 2 vector.
+Assume 2 support vector, thier margin should be bigger than the equidistance . we all assume that the plane is equidistant to the tree points. Start with assume that there is 2 support points, then prove the negative true. that it can not be that there is only 2\\
+use system of equation, can use y(x) = mx + b if it is a 2 dimensional data\\
+//Q2
+Hierarchical Clustering
+Similarities and Distanecs. Hamming and cosine similiarity.. Hamming distance for boolean distance
+Similarity table, join 2 closes to one. If Distance, 2 closest to 0.
+Can choose Single Link or Complete link
+Exam, display graph of best fit items with similarity value
+Single link, Closest to 1.
+of pair find maximim similary of cluster for new  table
+Complete Link
+join closest guy close to one, but from cluster, similarity value is the lowest similarity.
+//Q3 K-Means
+A picture and position of K cluster centers. Must be reasonable as to why a group a cluster as such. Stay dedicated with the starting Centroid centers.
+Repeat picture a couple of times. not all of them, but a reasonable amount of steps for it.
+//Q4 Density Based Clusterization
+maybe draw clusters. Remember minpnts = x points, include the center. Core poitns and boundary points for the  cluster. Don't forget it. Border points< minpnts but more than 1 neighboor.
+is reachable if the path is from core point to core point. Relatoin ship is not symmetric. item to core point, not corepoint to non core point.
+//Q5
+Cophenetic measure, wrinkle is define as distances  not similarity. Need to convert similarity to distances. why important? because the value of correlation will be different when calculatiod.
+Convert these valesu into a vector. and calculate correlation of vectors. dot product devided of the productof the norms. T * CT /(||T|| ||CT||)
