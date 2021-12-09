@@ -1,3 +1,25 @@
 12/9/2021
 Ready Final Exams next Tuesday
+Undergraduate Topics to stuffy for
+//
+Final Structure
+sameas before 120, 100 max you can get
+Grads have 5UG and 1G question
+INTERMEDIATE STEPS ARE A MUST!
+//
+Niaves Bayes, SVM Classification
+Hierachical Clustering
+-HC twist: data points are binary 7 dimension vcctors
+-proximity not givien
+-Metrix in B7 hammin distance
+HAMMING DISTANCE is allow3ed
+Clustering K-Means
+DBSCAN usage
+G
+Evalutaion of Hierachical Cluster
+Compute Cophenetic Distance Table, Cophenetic Correlation
+//Q1
+Naive Bayes
+Niave Bayes of it a column could just be a table. of feature x feature amount for class.Normal Distribution for the continous data set
+
 
